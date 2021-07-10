@@ -1,7 +1,9 @@
 define({
-  "name": "",
-  "version": "0.0.0",
-  "description": "",
+  "name": "Jsay",
+  "version": "1.0.0",
+  "description": "API документация",
+  "title": "Проект Jsay",
+  "url": "https://jsay-develop.herokuapp.com/",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
