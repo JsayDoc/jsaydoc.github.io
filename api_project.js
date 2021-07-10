@@ -4,7 +4,7 @@ define({
   "description": "API документация",
   "title": "Проект Jsay",
   "url": "https://jsay-develop.herokuapp.com/",
-  "sampleUrl": false,
+  "sampleUrl": true,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
