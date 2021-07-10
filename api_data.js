@@ -2,7 +2,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "accounts/auth/",
-    "title": "Авторизация",
+    "title": "Авторизация+",
     "success": {
       "examples": [
         {
