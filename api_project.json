@@ -1,9 +1,10 @@
 {
-  "name": "",
-  "version": "0.0.0",
-  "description": "",
+  "name": "Jsay",
+  "version": "1.0.0",
+  "description": "API документация",
   "sampleUrl": false,
-  "defaultVersion": "0.0.0",
+  "url": "https://jsay-develop.herokuapp.com/",
+  "defaultVersion": "1.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
