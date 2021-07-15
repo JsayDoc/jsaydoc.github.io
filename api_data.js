@@ -424,19 +424,14 @@ define({ "api": [
     "groupTitle": "Аутентификация"
   },
   {
-    "type": "",
-    "url": "[{post},",
-    "title": "{get}] notification/get_or_create/ Уведомление (создание, просмотр)",
+    "type": "post",
+    "url": "notification/get_or_create/",
+    "title": "Уведомление (создание, просмотр)",
     "success": {
       "examples": [
         {
-          "title": "POST-Response:",
+          "title": "Success-Response:",
           "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
-          "type": "json"
-        },
-        {
-          "title": "GET-Response:",
-          "content": "[\n    {\n        \"id\": 1,\n        \"start_notice\": \"09:00:00\",\n        \"end_notice\": \"19:00:00\",\n        \"period\": 120,\n        \"sound\": false,\n        \"active\": true\n    }\n]",
           "type": "json"
         }
       ]
@@ -514,6 +509,84 @@ define({ "api": [
         ]
       }
     },
+    "filename": "jsay/apps/notification/rest/v1/api.py",
+    "groupTitle": "Напоминания"
+  },
+  {
+    "type": "get",
+    "url": "notification/get_or_create/",
+    "title": "Уведомление (просмотр)",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"id\": 1,\n        \"start_notice\": \"09:00:00\",\n        \"end_notice\": \"19:00:00\",\n        \"period\": 120,\n        \"sound\": false,\n        \"active\": true\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "start_notice",
+            "description": "<p>Время первого напоминания</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "end_notice",
+            "description": "<p>Время последнего напоминания</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "period",
+            "description": "<p>Напоминать каждые N часа, значение в минутах</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "sound",
+            "description": "<p>Звук уведомления, <code>True</code> - включен, <code>False</code> - отключен</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "active",
+            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "notice_get",
+    "group": "Напоминания",
     "filename": "jsay/apps/notification/rest/v1/api.py",
     "groupTitle": "Напоминания"
   }
