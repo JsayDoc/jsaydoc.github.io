@@ -592,7 +592,7 @@ define({ "api": [
   },
   {
     "type": "patch",
-    "url": "notification/get_or_create/",
+    "url": "notification/update/:id/",
     "title": "Уведомление (редактирование)",
     "success": {
       "examples": [
