@@ -426,7 +426,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "notification/get_or_create/",
-    "title": "Уведомление (создание, просмотр)",
+    "title": "Уведомление (создание)",
     "success": {
       "examples": [
         {
@@ -587,6 +587,86 @@ define({ "api": [
     ],
     "name": "notice_get",
     "group": "Напоминания",
+    "filename": "jsay/apps/notification/rest/v1/api.py",
+    "groupTitle": "Напоминания"
+  },
+  {
+    "type": "patch",
+    "url": "notification/get_or_create/",
+    "title": "Уведомление (редактирование)",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "notice_update",
+    "group": "Напоминания",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "start_notice",
+            "description": "<p>Время первого напоминания</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "end_notice",
+            "description": "<p>Время последнего напоминания</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "period",
+            "description": "<p>Напоминать каждые N часа, значение в минутах</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "sound",
+            "description": "<p>Звук уведомления, <code>True</code> - включен, <code>False</code> - отключен</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "active",
+            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
+          }
+        ]
+      }
+    },
     "filename": "jsay/apps/notification/rest/v1/api.py",
     "groupTitle": "Напоминания"
   }
