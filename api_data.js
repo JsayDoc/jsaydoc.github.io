@@ -426,7 +426,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "notification/get_or_create/",
-    "title": "Уведомление (создание)",
+    "title": "Создание",
     "success": {
       "examples": [
         {
@@ -515,7 +515,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "notification/get_or_create/",
-    "title": "Уведомление (просмотр)",
+    "title": "Просмотр",
     "success": {
       "examples": [
         {
@@ -593,7 +593,7 @@ define({ "api": [
   {
     "type": "patch",
     "url": "notification/update/:id/",
-    "title": "Уведомление (редактирование)",
+    "title": "Редактирование",
     "success": {
       "examples": [
         {
