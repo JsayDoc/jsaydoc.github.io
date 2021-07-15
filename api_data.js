@@ -269,8 +269,6 @@ define({ "api": [
         ]
       }
     },
-    "name": "resend_activate",
-    "group": "Аутентификация",
     "permission": [
       {
         "name": "User",
@@ -278,6 +276,8 @@ define({ "api": [
         "description": "<p>Permission is granted to modify user objects.</p>"
       }
     ],
+    "name": "resend_activate",
+    "group": "Аутентификация",
     "description": "<p>Переотправка письма активации</p>",
     "filename": "jsay/apps/account/rest/v1/api.py",
     "groupTitle": "Аутентификация"
@@ -315,7 +315,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "social_auth/<backend>/",
+    "url": "social_auth/:backend/",
     "title": "Авторизация через соц. сети",
     "success": {
       "examples": [
@@ -355,7 +355,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"400 Client Error: Bad Request for url: https://graph.facebook.com/v8.0/me?fields=id%2C+name\"\n}",
+          "content": "{\n    \"error_code\": 1,\n    \"error_message\": [\n        \"400 Client Error: Bad Request for url: https://graph.facebook.com/v8.0/me?fields=id%2C+name%2C+email\"\n    ]\n}",
           "type": "json"
         }
       ],
@@ -422,5 +422,99 @@ define({ "api": [
     },
     "filename": "jsay/apps/account/rest/v1/api.py",
     "groupTitle": "Аутентификация"
+  },
+  {
+    "type": "post, get",
+    "url": "notification/get_or_create/",
+    "title": "Уведомление (создание, просмотр)",
+    "success": {
+      "examples": [
+        {
+          "title": "Create-Response:",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
+          "type": "json"
+        },
+        {
+          "title": "Get-Response:",
+          "content": "[\n    {\n        \"id\": 1,\n        \"start_notice\": \"09:00:00\",\n        \"end_notice\": \"19:00:00\",\n        \"period\": 120,\n        \"sound\": false,\n        \"active\": true\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "notice_create",
+    "group": "Напоминания",
+    "description": "<p>Создание настроек напоминания пользователя. Если настройка уже существует в ответе будет возвращаться предупреждение об этом, в тоже время HTTP ответ будет <code>201</code>, как и в случае создания.</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "hh:mm"
+            ],
+            "optional": false,
+            "field": "start_notice",
+            "description": "<p>Время первого напоминания</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "hh:mm"
+            ],
+            "optional": false,
+            "field": "end_notice",
+            "description": "<p>Время последнего напоминания</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "period",
+            "description": "<p>Напоминать каждые N часа, значение в минутах</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "sound",
+            "defaultValue": "False",
+            "description": "<p>Звук уведомления, <code>True</code> - включен, <code>False</code> - отключен</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "active",
+            "defaultValue": "False",
+            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/notification/rest/v1/api.py",
+    "groupTitle": "Напоминания"
   }
 ] });
