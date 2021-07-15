@@ -632,6 +632,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "hh:mm"
+            ],
             "optional": true,
             "field": "start_notice",
             "description": "<p>Время первого напоминания</p>"
@@ -639,6 +642,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "hh:mm"
+            ],
             "optional": true,
             "field": "end_notice",
             "description": "<p>Время последнего напоминания</p>"
