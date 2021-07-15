@@ -424,9 +424,9 @@
     "groupTitle": "Аутентификация"
   },
   {
-    "type": "post",
-    "url": "{get}",
-    "title": "notification/get_or_create/ Уведомление (создание, просмотр)",
+    "type": "",
+    "url": "[{post},",
+    "title": "{get}] notification/get_or_create/ Уведомление (создание, просмотр)",
     "success": {
       "examples": [
         {
