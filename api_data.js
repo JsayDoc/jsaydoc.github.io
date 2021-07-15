@@ -425,6 +425,85 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "notification/fcm_token/",
+    "title": "FCM Token",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"registration_id\": \"UID090974679\",\n    \"device_id\": \"f6e47bd0-e019-11eb-ba80-0242ac130004\",\n    \"device\": \"ios\",\n    \"active\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "fcm_token",
+    "group": "Напоминания",
+    "description": "<p>Создание FirebaseToken для отправки PUSH уведомлений</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "registration_id",
+            "description": "<p>FirebaseToken</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "device_id",
+            "description": "<p>ID устройства</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "ios",
+              "android"
+            ],
+            "optional": false,
+            "field": "device",
+            "description": "<p>Тип устройства</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "active",
+            "defaultValue": "True",
+            "description": "<p>Статус уведомлений, <code>True</code> - включен, <code>False</code> - отключен</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/notification/rest/v1/api.py",
+    "groupTitle": "Напоминания"
+  },
+  {
+    "type": "post",
     "url": "notification/get_or_create/",
     "title": "Создание",
     "success": {
