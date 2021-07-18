@@ -754,5 +754,373 @@ define({ "api": [
     },
     "filename": "jsay/apps/notification/rest/v1/api.py",
     "groupTitle": "Напоминания"
+  },
+  {
+    "type": "get",
+    "url": "core/get_questions/",
+    "title": "Добавить отзыв",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"id\": 1,\n        \"question\": \"Дорого\"\n    },\n    {\n        \"id\": 2,\n        \"question\": \"Непонятно\"\n    },\n    {\n        \"id\": 3,\n        \"question\": \"Неудобно\"\n    },\n    {\n        \"id\": 4,\n        \"question\": \"Работает неправильно\"\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "question",
+            "description": "<p>Название вопроса</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "add_feedback",
+    "group": "Отзывы",
+    "filename": "jsay/apps/feedback/rest/v1/api.py",
+    "groupTitle": "Отзывы"
+  },
+  {
+    "type": "get",
+    "url": "core/get_questions/",
+    "title": "Варианты вопросов",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"id\": 1,\n        \"question\": \"Дорого\"\n    },\n    {\n        \"id\": 2,\n        \"question\": \"Непонятно\"\n    },\n    {\n        \"id\": 3,\n        \"question\": \"Неудобно\"\n    },\n    {\n        \"id\": 4,\n        \"question\": \"Работает неправильно\"\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "question",
+            "description": "<p>Название вопроса</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "get_questions",
+    "group": "Отзывы",
+    "filename": "jsay/apps/core/rest/v1/api.py",
+    "groupTitle": "Отзывы"
+  },
+  {
+    "type": "get",
+    "url": "accounts/account/",
+    "title": "Просмотр данных",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 200, 300, 500],\n    \"auth_status\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_name",
+            "description": "<p>Имя пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Эл. почта пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "water",
+            "description": "<p>Норма воды</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>Пол пользователя, <code>1</code> - Муж. <code>2</code> - Жен.</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number[]",
+            "optional": false,
+            "field": "bottles",
+            "description": "<p>Варианты бутылок, пример: [<code>100, 300, 500, 1000</code>]</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "auth_status",
+            "description": "<p>Статус авторизации</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "auth_status.social",
+            "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "auth_status.provider",
+            "description": "<p>Название соц. сети</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "account_info",
+    "group": "Пользователь",
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
+  },
+  {
+    "type": "patch",
+    "url": "accounts/account/update/",
+    "title": "Редактирование данных",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"first_name\": \"Егор\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 300, 500, 1000],\n    \"newsletters\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "account_update",
+    "group": "Пользователь",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "first_name",
+            "description": "<p>Имя пользователя</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "water",
+            "description": "<p>Норма воды</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "bottles",
+            "description": "<p>Варианты бутылок, пример: [<code>100, 300, 500, 1000</code>]</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "1",
+              "2"
+            ],
+            "optional": true,
+            "field": "gender",
+            "description": "<p>Пол пользователя, <code>1</code> - Муж. <code>2</code> - Жен.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": true,
+            "field": "newsletters",
+            "defaultValue": "True",
+            "description": "<p>Подписка на новости</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/change_password/",
+    "title": "Изменение пароля",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Пароль успешно изменен\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Пароль успешно изменен</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "change_password",
+    "group": "Пользователь",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Новый пароль, минимум <code>6</code> символов (минимум <code>1</code> цифра и <code>1</code> буква)</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
   }
 ] });
