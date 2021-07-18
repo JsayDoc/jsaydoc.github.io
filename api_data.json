@@ -880,7 +880,7 @@
             "type": "Boolean",
             "optional": false,
             "field": "auth_status.social",
-            "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
+            "description": "<p>Статус соц. сети</p>"
           },
           {
             "group": "Response",
