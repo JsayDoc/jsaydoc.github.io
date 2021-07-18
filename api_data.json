@@ -820,7 +820,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 200, 300, 500],\n    \"status_auth\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
+          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 200, 300, 500],\n    \"auth_status\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
           "type": "json"
         }
       ],
@@ -870,23 +870,23 @@
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Object[]",
             "optional": false,
-            "field": "status_auth",
+            "field": "auth_status",
             "description": "<p>Статус авторизации</p>"
           },
           {
             "group": "Response",
             "type": "Boolean",
             "optional": false,
-            "field": "status_auth.social",
+            "field": "auth_status.social",
             "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
           },
           {
             "group": "Response",
             "type": "String",
             "optional": false,
-            "field": "status_auth.provider",
+            "field": "auth_status.provider",
             "description": "<p>Название соц. сети</p>"
           }
         ]
