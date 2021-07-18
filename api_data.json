@@ -504,7 +504,7 @@
   },
   {
     "type": "post",
-    "url": "notification/get_or_create/",
+    "url": "notification/create/",
     "title": "Создание",
     "success": {
       "examples": [
@@ -538,7 +538,7 @@
     ],
     "name": "notice_create",
     "group": "Напоминания",
-    "description": "<p>Создание настроек напоминания пользователя. Если настройка уже существует в ответе будет возвращаться предупреждение об этом, в тоже время HTTP ответ будет <code>201</code>, как и в случае создания.</p>",
+    "description": "<p>Создание настроек напоминания пользователя. Если напоминание уже существует в ответе будет возвращаться предупреждение об этом, в тоже время HTTP ответ будет <code>200</code>, как и в случае создания.</p>",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -593,13 +593,13 @@
   },
   {
     "type": "get",
-    "url": "notification/get_or_create/",
+    "url": "notification/list/",
     "title": "Просмотр",
     "success": {
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[\n    {\n        \"id\": 1,\n        \"start_notice\": \"09:00:00\",\n        \"end_notice\": \"19:00:00\",\n        \"period\": 120,\n        \"sound\": false,\n        \"active\": true\n    }\n]",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
           "type": "json"
         }
       ],
