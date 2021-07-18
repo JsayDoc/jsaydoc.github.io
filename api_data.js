@@ -828,6 +828,27 @@ define({ "api": [
         "Response": [
           {
             "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "auth_status",
+            "description": "<p>Статус авторизации</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "auth_status.social",
+            "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "auth_status.provider",
+            "description": "<p>Название соц. сети</p>"
+          },
+          {
+            "group": "Response",
             "type": "Number",
             "optional": false,
             "field": "id",
@@ -867,27 +888,6 @@ define({ "api": [
             "optional": false,
             "field": "bottles",
             "description": "<p>Варианты бутылок, JSON Array пример: [<code>100, 300, 500, 1000</code>]</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Object[]",
-            "optional": false,
-            "field": "auth_status",
-            "description": "<p>Статус авторизации</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Boolean",
-            "optional": false,
-            "field": "auth_status.social",
-            "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "auth_status.provider",
-            "description": "<p>Название соц. сети</p>"
           }
         ]
       }
