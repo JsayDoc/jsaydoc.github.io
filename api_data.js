@@ -1050,6 +1050,7 @@ define({ "api": [
     ],
     "name": "change_password",
     "group": "Пользователь",
+    "description": "<p>Пользователь должен быть авторизован с помощью ввода емейла и пароля, в противном случае ответ будет <code>403</code></p>",
     "parameter": {
       "fields": {
         "Parameter": [
