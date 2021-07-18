@@ -820,7 +820,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 200, 300, 500],\n    \"auth_status\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
+          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 200, 300, 500],\n    \"status_auth\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
           "type": "json"
         }
       ],
@@ -863,23 +863,30 @@
           },
           {
             "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "bottles",
+            "description": "<p>Варианты бутылок, JSON Array пример: [<code>100, 300, 500, 1000</code>]</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
-            "field": "auth_status",
+            "field": "status_auth",
             "description": "<p>Статус авторизации</p>"
           },
           {
             "group": "Response",
             "type": "Boolean",
             "optional": false,
-            "field": "auth_status.social",
+            "field": "status_auth.social",
             "description": "<p>Статус соц. сети, <code>True</code> - через соц. сеть, <code>False</code> - через email</p>"
           },
           {
             "group": "Response",
             "type": "String",
             "optional": false,
-            "field": "auth_status.provider",
+            "field": "status_auth.provider",
             "description": "<p>Название соц. сети</p>"
           }
         ]
