@@ -756,6 +756,66 @@
     "groupTitle": "Напоминания"
   },
   {
+    "type": "post",
+    "url": "feedback/add_feedback/",
+    "title": "Добавить отзыв",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"question\": [\n        1,\n        4\n    ],\n    \"message\": \"testing\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "add_feedback",
+    "group": "Отзывы",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Object[]",
+            "optional": true,
+            "field": "question",
+            "description": "<p>ID вопроса, JSON Array пример: [<code>1, 4</code>]</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "2000",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Комментарий.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/feedback/rest/v1/api.py",
+    "groupTitle": "Отзывы"
+  },
+  {
     "type": "get",
     "url": "core/get_questions/",
     "title": "Варианты вопросов",
@@ -884,7 +944,7 @@
           },
           {
             "group": "Response",
-            "type": "Number",
+            "type": "Object[]",
             "optional": false,
             "field": "bottles",
             "description": "<p>Варианты бутылок, JSON Array пример: [<code>100, 300, 500, 1000</code>]</p>"
@@ -973,7 +1033,7 @@
           },
           {
             "group": "Parameter",
-            "type": "Number[]",
+            "type": "Object[]",
             "optional": true,
             "field": "bottles",
             "description": "<p>Варианты бутылок, JSON Array пример: [<code>100, 300, 500, 1000</code>]</p>"
