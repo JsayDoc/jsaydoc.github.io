@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API документация",
   "title": "Проект Jsay",
-  "url": "https://jsay-develop.herokuapp.com/",
+  "url": "https://jsay-develop.herokuapp.com/api/v1/",
   "sampleUrl": true,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
