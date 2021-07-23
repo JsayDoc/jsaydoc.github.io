@@ -1318,5 +1318,211 @@ define({ "api": [
     },
     "filename": "jsay/apps/account/rest/v1/api.py",
     "groupTitle": "Пользователь"
+  },
+  {
+    "type": "post",
+    "url": "accounts/new_email/add/",
+    "title": "Добавление новой почты",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Код отправлен на user@example.com\",\n    \"email\": \"user@example.com\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Код успешно отправлен</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "1.Error-Response:",
+          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "2.Error-Response:",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": 30\n}",
+          "type": "json"
+        },
+        {
+          "title": "3.Error-Response:",
+          "content": "{\n    \"error_code\": 3,\n    \"error_message\": \"Изменение невозможно, обратитесь в техподдержку\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Error Code": [
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Смена емейла заблокирована на 24 часа</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Время блокировки в секундах</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Эл. почта уже занята</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "new_email",
+    "group": "Пользователь",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Новая эл. почта пользователя</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
+  },
+  {
+    "type": "post",
+    "url": "accounts/new_email/confirm/",
+    "title": "Подтверждение новой почты",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Вы изменили адрес электронной почты\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Адрес электронной почты изменен</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "1.Error-Response:",
+          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "2.Error-Response:",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"Неправильный код подтверждения\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Error Code": [
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Смена емейла заблокирована на 24 часа</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Неправильный код подтверждения</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "new_email_confirm",
+    "group": "Пользователь",
+    "description": "<p>Если Пользователь ввел 3 раза неверно проверочный код, смена емейла блокируется на <code>24</code> часа.</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Новая эл. почта пользователя</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "4",
+            "optional": false,
+            "field": "code",
+            "description": "<p>Код подтверждения полученный на емейл</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
   }
 ] });
