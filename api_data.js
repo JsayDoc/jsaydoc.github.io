@@ -435,6 +435,58 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "accounts/token/refresh/",
+    "title": "Продление токена",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhw\"\n}\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "access",
+            "description": "<p>Новый токен пользователя</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n    \"detail\": \"Токен недействителен или просрочен\",\n    \"code\": \"token_not_valid\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "name": "token_refresh",
+    "group": "Аутентификация",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "refresh",
+            "description": "<p>Refresh Token пользователя</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/urls.py",
+    "groupTitle": "Аутентификация"
+  },
+  {
+    "type": "post",
     "url": "notification/fcm_token/",
     "title": "FCM Token",
     "success": {
