@@ -46,7 +46,7 @@ define({ "api": [
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": 30\n}",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -141,7 +141,7 @@ define({ "api": [
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": 30\n}",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -250,7 +250,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": 30\n}",
+          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -1381,7 +1381,7 @@ define({ "api": [
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": 30\n}",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -1563,7 +1563,7 @@ define({ "api": [
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": 30\n}",
+          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
           "type": "json"
         },
         {
