@@ -325,7 +325,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "social_auth/:backend/",
+    "url": "accounts/social_auth/:backend/",
     "title": "Авторизация через соц. сети",
     "success": {
       "examples": [
