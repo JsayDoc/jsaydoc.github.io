@@ -575,6 +575,13 @@ define({ "api": [
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_drink.date",
+            "description": "<p>День выполнения</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "first_drink.award",
@@ -593,13 +600,6 @@ define({ "api": [
             "optional": false,
             "field": "first_drink.award.photo_code",
             "description": "<p>Код миниатюры</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "first_drink.date",
-            "description": "<p>День выполнения</p>"
           }
         ]
       }
