@@ -1,8 +1,8 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "accounts/int_layer/",
-    "title": "Статус пользователя",
+    "url": "accounts/status_active/",
+    "title": "Статус и активность пользователя",
     "success": {
       "examples": [
         {
