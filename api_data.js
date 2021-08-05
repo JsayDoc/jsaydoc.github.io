@@ -119,7 +119,7 @@ define({ "api": [
         "description": "<p>Permission is granted to modify user objects.</p>"
       }
     ],
-    "name": "int_layer",
+    "name": "status_active",
     "group": "Активность_и_статус",
     "parameter": {
       "fields": {
