@@ -319,6 +319,19 @@ define({ "api": [
     "version": "1.0.0",
     "name": "reset_password",
     "group": "Аутентификация",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Эл. почта пользователя</p>"
+          }
+        ]
+      }
+    },
     "description": "<p>Если пользователь есть в системе отправляем новый пароль, если нет отправляем приглашение</p>",
     "filename": "jsay/apps/account/rest/v1/api.py",
     "groupTitle": "Аутентификация"
