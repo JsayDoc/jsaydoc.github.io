@@ -500,6 +500,162 @@
   },
   {
     "type": "post",
+    "url": "accounts/drink_water/",
+    "title": "Выпить воды",
+    "success": {
+      "examples": [
+        {
+          "title": "1.Success-Response:",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        },\n        \"date\": \"2021-09-06\"\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        },\n        \"date\": \"2021-09-06\"\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        },\n        \"date\": \"2021-09-06\"\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "2.Success-Response:",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": false\n    },\n    \"first_drink\": {\n        \"notify\": false\n    },\n    \"drink_award\": {\n        \"notify\": false\n    },\n    \"daily_rate\": {\n        \"notify\": false\n    }\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_norm",
+            "description": "<p>Дневная цель</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "daily_norm.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_norm.milliliter",
+            "description": "<p>Количество выпитой воды в миллилитрах</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_norm.percent",
+            "description": "<p>Процент пользователей, которые достигли дневной цели</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_norm.date",
+            "description": "<p>День выполнения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "first_drink",
+            "description": "<p>Пользователь выпивает воду впервые в приложении</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "first_drink.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "first_drink.percent",
+            "description": "<p>Процент пользователей, которые достигли дневной цели</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "first_drink.award",
+            "description": "<p>Достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_drink.award.text",
+            "description": "<p>Текст поздравления</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_drink.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_drink.date",
+            "description": "<p>День выполнения</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "drink_water",
+    "group": "Вода_и_достижения",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "date",
+            "description": "<p>Текущая дата</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "milliliter",
+            "description": "<p>Количество воды в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "description": "<p>Если Пользователь отменяет пополнение, можно отправить отрицательное значение <code>-150</code></p>",
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Вода_и_достижения"
+  },
+  {
+    "type": "post",
     "url": "notification/fcm_token/",
     "title": "FCM Token",
     "success": {
