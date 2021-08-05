@@ -506,7 +506,7 @@
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        },\n        \"date\": \"2021-09-06\"\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        },\n        \"date\": \"2021-09-06\"\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        },\n        \"date\": \"2021-09-06\"\n    }\n}",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        }\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        }\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        }\n    }\n}",
           "type": "json"
         },
         {
@@ -599,6 +599,69 @@
             "type": "String",
             "optional": false,
             "field": "first_drink.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_award",
+            "description": "<p>Достижение выпитой воды</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "drink_award.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "drink_award.counter",
+            "description": "<p>Счетчик повторений</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "drink_award.percent",
+            "description": "<p>Процент пользователей получивших достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_award.date",
+            "description": "<p>День достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_award.award",
+            "description": "<p>Достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_award.award.title",
+            "description": "<p>Название достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_award.award.text",
+            "description": "<p>Текст поздравления</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_award.award.photo_code",
             "description": "<p>Код миниатюры</p>"
           }
         ]
