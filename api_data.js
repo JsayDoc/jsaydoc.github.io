@@ -663,6 +663,69 @@ define({ "api": [
             "optional": false,
             "field": "drink_award.award.photo_code",
             "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_rate",
+            "description": "<p>Достижение дневной нормы</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "daily_rate.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_rate.counter",
+            "description": "<p>Счетчик повторений</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_rate.percent",
+            "description": "<p>Процент пользователей получивших достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_rate.date",
+            "description": "<p>День достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_rate.award",
+            "description": "<p>Достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_rate.award.title",
+            "description": "<p>Название достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_rate.award.text",
+            "description": "<p>Текст поздравления</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_rate.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
           }
         ]
       }
