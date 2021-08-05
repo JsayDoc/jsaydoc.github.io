@@ -2125,7 +2125,7 @@
             "type": "Boolean",
             "optional": false,
             "field": "check_full_info",
-            "description": "<p>Статус проверки данных пользователя <code>True</code> - необходима проверка, <code>False</code> - проверка не требуется</p>"
+            "description": "<p>Статус данных пользователя <code>True</code> - необходима проверка, <code>False</code> - проверка не требуется</p>"
           }
         ]
       }
