@@ -269,6 +269,13 @@ define({ "api": [
             "optional": false,
             "field": "token.access",
             "description": "<p>Токен пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "auth",
+            "description": "<p>Статус (авторизация или регистрация) <code>True</code> - был авторизован, <code>False</code> - был зарегистрирован</p>"
           }
         ]
       }
