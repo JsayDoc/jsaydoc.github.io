@@ -22,6 +22,34 @@
             "group": "Response",
             "type": "Object",
             "optional": false,
+            "field": "daily_water",
+            "description": "<p>Информация о выпитой воде</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_water.water_norm",
+            "description": "<p>Норма воды за день</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_water.drunk",
+            "description": "<p>Выпитая вода за день</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_water.percent",
+            "description": "<p>Процент выпитой воды за день</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
             "field": "daily_active",
             "description": "<p>Достижение активности</p>"
           },
@@ -94,6 +122,13 @@
             "optional": false,
             "field": "check_full_info",
             "description": "<p>Статус данных пользователя <code>True</code> - необходима проверка, <code>False</code> - проверка не требуется</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object[]",
+            "optional": false,
+            "field": "bottles",
+            "description": "<p>Бутылки пользователя</p>"
           }
         ]
       }
