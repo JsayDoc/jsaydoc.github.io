@@ -986,20 +986,6 @@ define({ "api": [
           },
           {
             "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "results.date",
-            "description": "<p>Год</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "results.percent",
-            "description": "<p>Процент за год</p>"
-          },
-          {
-            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "results.data",
@@ -1032,6 +1018,20 @@ define({ "api": [
             "optional": false,
             "field": "results.data.8.percent",
             "description": "<p>Процент за текущий месяц</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "results.date",
+            "description": "<p>Год</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "results.percent",
+            "description": "<p>Процент за год</p>"
           }
         ]
       }
