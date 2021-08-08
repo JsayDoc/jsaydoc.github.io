@@ -1014,6 +1014,13 @@ define({ "api": [
           },
           {
             "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "results.data.8.percent",
+            "description": "<p>Процент за текущий месяц</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "results.data.8.days",
@@ -1025,13 +1032,6 @@ define({ "api": [
             "optional": false,
             "field": "results.data.8.days.1",
             "description": "<p>День и процент <code>&quot;1&quot;: 107</code></p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "results.data.8.percent",
-            "description": "<p>Процент за текущий месяц</p>"
           }
         ]
       }
