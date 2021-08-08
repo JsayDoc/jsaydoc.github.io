@@ -979,6 +979,27 @@ define({ "api": [
         "Response": [
           {
             "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Количество годов</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "next",
+            "description": "<p>Ссылка на следующую страницу, может быть <code>string</code> или <code>null</code></p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "previous",
+            "description": "<p>Ссылка на предыдущую страницу, может быть <code>string</code> или <code>null</code></p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "results",
