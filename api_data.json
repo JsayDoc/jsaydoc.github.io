@@ -12,7 +12,7 @@
         },
         {
           "title": "2.Success-Response:",
-          "content": "{\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"daily_active\": {\n        \"notify\": false\n    }\n}",
+          "content": "{\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"daily_active\": {\n        \"notify\": false\n    },\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100\n    }\n}",
           "type": "json"
         }
       ],
