@@ -7,7 +7,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"daily_active\": {\n        \"notify\": true,\n        \"counter\": 0,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-08\",\n        \"award\": {\n            \"title\": \"Вы пользуетесь приложением 1 дней\",\n            \"text\": \"Поздравляем и увидимся завтра!\",\n            \"photo_code\": \"da1\"\n        }\n    }\n}",
+          "content": "{\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"daily_active\": {\n        \"notify\": false\n    },\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 0,\n        \"percent\": 0\n    }\n}",
           "type": "json"
         },
         {
