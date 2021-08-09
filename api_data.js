@@ -970,6 +970,98 @@ define({ "api": [
     "groupTitle": "Вода_и_достижения"
   },
   {
+    "type": "get",
+    "url": "accounts/account/achievements/",
+    "title": "Достижения пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"drink_awards\": [\n        {\n            \"award\": {\n                \"title\": \"Почти аквариум!\",\n                \"text\": \"За последнее время вы выпили 40 л воды. Обычно такой объем у домашнего аквариума :) Продолжайте!\",\n                \"photo_code\": \"wd2\"\n            },\n            \"counter\": 0,\n            \"percent\": 62\n        },\n        {\n            \"award\": {\n                \"title\": \"Ваши первые 2 л!\",\n                \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n                \"photo_code\": \"wd1\"\n            },\n            \"counter\": 0,\n            \"percent\": 100\n        }\n    ],\n    \"active_awards\": [\n        {\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 7 дней\",\n                \"text\": \"Вы пользуетесь приложением 7 дней и за это время ваш\n                организм получал свою дневную норму воды. Отличный результат!\",\n                \"photo_code\": \"da2\"\n            },\n            \"counter\": 0\n        },\n        {\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 1 дней\",\n                \"text\": \"Поздравляем и увидимся завтра!\",\n                \"photo_code\": \"da1\"\n            },\n            \"counter\": 0\n        }\n    ],\n    \"rate_awards\": [\n        {\n            \"award\": {\n                \"title\": \"Вы 1 день пьете свою норму воды\",\n                \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n                \"photo_code\": \"dr1\"\n            },\n            \"counter\": 0\n        },\n        {\n            \"award\": {\n                \"title\": \"Вы 2 дней пьете свою норму воды\",\n                \"text\": \"Второй день с водой — вы отлично идете!\",\n                \"photo_code\": \"dr2\"\n            },\n            \"counter\": 0\n        }\n    ],\n    \"single_awards\": [\n        {\n            \"award\": {\n                \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n                \"photo_code\": \"s1\"\n            }\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_awards",
+            "description": "<p>Достижения выпитой воды</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_awards.award",
+            "description": "<p>Достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_awards.award.title",
+            "description": "<p>Название достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_awards.award.text",
+            "description": "<p>Текст достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_awards.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_awards.counter",
+            "description": "<p>Счетчик повторений</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "drink_awards.percent",
+            "description": "<p>Процент выполнения</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "user_achievements",
+    "group": "Вода_и_достижения",
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Вода_и_достижения"
+  },
+  {
     "type": "post",
     "url": "history/data/",
     "title": "История выпитой воды",
