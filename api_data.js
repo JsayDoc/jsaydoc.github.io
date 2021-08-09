@@ -272,6 +272,49 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "accounts/exists/",
+    "title": "Регистрация через почту",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"status\": true\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "status",
+            "description": "<p><code>True</code> - существует, <code>False</code> - не существует</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "exists",
+    "group": "Аутентификация",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Валидный e-mail - адрес почты</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Аутентификация"
+  },
+  {
+    "type": "post",
     "url": "accounts/registration/",
     "title": "Регистрация через почту",
     "success": {
@@ -304,43 +347,6 @@ define({ "api": [
             "optional": false,
             "field": "token.access",
             "description": "<p>Токен пользователя</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Boolean",
-            "optional": false,
-            "field": "auth",
-            "description": "<p>Статус (авторизация или регистрация) <code>True</code> - был авторизован, <code>False</code> - был зарегистрирован</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "examples": [
-        {
-          "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Неверный емейл или пароль\"\n}",
-          "type": "json"
-        },
-        {
-          "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Error Code": [
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "1",
-            "description": "<p>Неверный емейл или пароль</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "2",
-            "description": "<p>Время блокировки в секундах</p>"
           }
         ]
       }
