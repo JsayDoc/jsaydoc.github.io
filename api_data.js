@@ -273,7 +273,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "accounts/exists/",
-    "title": "Регистрация через почту",
+    "title": "Проверка емайла в БД",
     "success": {
       "examples": [
         {
