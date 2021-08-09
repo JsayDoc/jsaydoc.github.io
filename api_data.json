@@ -992,6 +992,20 @@
           },
           {
             "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "drink_awards.counter",
+            "description": "<p>Счетчик повторений</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "drink_awards.percent",
+            "description": "<p>Процент выполнения</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "drink_awards.award",
@@ -1020,24 +1034,24 @@
           },
           {
             "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "drink_awards.counter",
-            "description": "<p>Счетчик повторений</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "drink_awards.percent",
-            "description": "<p>Процент выполнения</p>"
-          },
-          {
-            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "active_awards",
             "description": "<p>Достижение активности</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "active_awards.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "active_awards.counter",
+            "description": "<p>Счетчик повторений</p>"
           },
           {
             "group": "Response",
@@ -1059,20 +1073,6 @@
             "optional": false,
             "field": "active_awards.award.text",
             "description": "<p>Текст достижения</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "active_awards.award.photo_code",
-            "description": "<p>Код миниатюры</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "active_awards.counter",
-            "description": "<p>Счетчик повторений</p>"
           }
         ]
       }
