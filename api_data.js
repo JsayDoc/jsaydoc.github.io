@@ -384,6 +384,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "water",
+            "defaultValue": "1500",
             "description": "<p>Норма воды</p>"
           },
           {
