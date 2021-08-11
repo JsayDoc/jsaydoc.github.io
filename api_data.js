@@ -382,7 +382,7 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "water",
             "description": "<p>Норма воды</p>"
           },
@@ -393,7 +393,7 @@ define({ "api": [
               "1",
               "2"
             ],
-            "optional": false,
+            "optional": true,
             "field": "gender",
             "description": "<p>Пол пользователя, <code>1</code> - Муж. <code>2</code> - Жен.</p>"
           },
