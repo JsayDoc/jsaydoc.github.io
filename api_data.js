@@ -1845,26 +1845,6 @@ define({ "api": [
       }
     },
     "version": "1.0.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>User Bearer Token.</p>"
-          }
-        ]
-      }
-    },
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access rights needed.",
-        "description": "<p>Permission is granted to modify user objects.</p>"
-      }
-    ],
     "name": "tariffs",
     "group": "Основные",
     "filename": "jsay/apps/core/rest/v1/api.py",
