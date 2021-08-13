@@ -1750,6 +1750,43 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "core/legal_docs/",
+    "title": "Правовые документы",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"policy\": \"Политика конфиденциальности – по сути документ, при помощи которого вы объясняете вашим\n    пользователям то, как вы обрабатываете его данные. Часто встречается и другое (официальное) название\n    данного документа - Политика обработки персональных данных.\",\n    \"terms\": \"Условия использования, условия предоставления услуг (англ. Terms of service/use) — это правила,\n    с которыми нужно согласиться перед использованием какой-либо службы, чаще всего в интернете.\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "policy",
+            "description": "<p>Политика конфиденциальности</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "terms",
+            "description": "<p>Условия использования</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "get_questions",
+    "group": "Основные",
+    "filename": "jsay/apps/core/rest/v1/api.py",
+    "groupTitle": "Основные"
+  },
+  {
+    "type": "get",
     "url": "core/tariffs/",
     "title": "Тарифные планы",
     "success": {
@@ -1828,44 +1865,7 @@ define({ "api": [
         "description": "<p>Permission is granted to modify user objects.</p>"
       }
     ],
-    "name": "benefits",
-    "group": "Основные",
-    "filename": "jsay/apps/core/rest/v1/api.py",
-    "groupTitle": "Основные"
-  },
-  {
-    "type": "get",
-    "url": "core/legal_docs/",
-    "title": "Правовые документы",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    \"policy\": \"Политика конфиденциальности – по сути документ, при помощи которого вы объясняете вашим\n    пользователям то, как вы обрабатываете его данные. Часто встречается и другое (официальное) название\n    данного документа - Политика обработки персональных данных.\",\n    \"terms\": \"Условия использования, условия предоставления услуг (англ. Terms of service/use) — это правила,\n    с которыми нужно согласиться перед использованием какой-либо службы, чаще всего в интернете.\"\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "policy",
-            "description": "<p>Политика конфиденциальности</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "terms",
-            "description": "<p>Условия использования</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.0.0",
-    "name": "get_questions",
+    "name": "tariffs",
     "group": "Основные",
     "filename": "jsay/apps/core/rest/v1/api.py",
     "groupTitle": "Основные"
