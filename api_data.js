@@ -1793,12 +1793,19 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[\n    {\n        \"title\": \"Безлимит\",\n        \"cost\": 1200,\n        \"price_per_month\": 0,\n        \"month\": 0,\n        \"unlimited\": true,\n        \"discount\": 0\n    },\n    {\n        \"title\": \"1 месяц\",\n        \"cost\": 99,\n        \"price_per_month\": 99,\n        \"month\": 1,\n        \"unlimited\": false,\n        \"discount\": 0\n    },\n    {\n        \"title\": \"6 месяцев\",\n        \"cost\": 499,\n        \"price_per_month\": 99,\n        \"month\": 6,\n        \"unlimited\": false,\n        \"discount\": 16\n    },\n    {\n        \"title\": \"12 месяцев\",\n        \"cost\": 899,\n        \"price_per_month\": 99,\n        \"month\": 12,\n        \"unlimited\": false,\n        \"discount\": 25\n    }\n]",
+          "content": "[\n    {\n        \"id\": 1,\n        \"title\": \"Безлимит\",\n        \"cost\": 1200,\n        \"price_per_month\": 0,\n        \"month\": 0,\n        \"unlimited\": true,\n        \"discount\": 0\n    },\n    {\n        \"id\": 2,\n        \"title\": \"1 месяц\",\n        \"cost\": 99,\n        \"price_per_month\": 99,\n        \"month\": 1,\n        \"unlimited\": false,\n        \"discount\": 0\n    },\n    {\n        \"id\": 3,\n        \"title\": \"6 месяцев\",\n        \"cost\": 499,\n        \"price_per_month\": 99,\n        \"month\": 6,\n        \"unlimited\": false,\n        \"discount\": 16\n    },\n    {\n        \"id\": 4,\n        \"title\": \"12 месяцев\",\n        \"cost\": 899,\n        \"price_per_month\": 99,\n        \"month\": 12,\n        \"unlimited\": false,\n        \"discount\": 25\n    }\n]",
           "type": "json"
         }
       ],
       "fields": {
         "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID тарифа</p>"
+          },
           {
             "group": "Success 200",
             "type": "String",
