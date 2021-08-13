@@ -586,7 +586,7 @@ define({ "api": [
     "version": "1.0.0",
     "name": "social_auth",
     "group": "Аутентификация",
-    "description": "<p>Возможные варианты backend - <code>facebook, google-oauth2, yandex-oauth2, vk-oauth2</code></p>",
+    "description": "<p>Возможные варианты backend - <code>facebook, google-oauth2, yandex-oauth2, vk-oauth2, apple-id</code></p>",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -978,7 +978,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"drink_awards\": [\n        {\n            \"counter\": 0,\n            \"percent\": 62,\n            \"award\": {\n                \"title\": \"Почти аквариум!\",\n                \"text\": \"За последнее время вы выпили 40 л воды. Обычно такой объем у домашнего аквариума :) Продолжайте!\",\n                \"photo_code\": \"wd2\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"percent\": 100,\n            \"award\": {\n                \"title\": \"Ваши первые 2 л!\",\n                \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n                \"photo_code\": \"wd1\"\n            }\n        }\n    ],\n    \"active_awards\": [\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 7 дней\",\n                \"text\": \"Вы пользуетесь приложением 7 дней. Отличный результат!\",\n                \"photo_code\": \"da2\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 1 дней\",\n                \"text\": \"Поздравляем и увидимся завтра!\",\n                \"photo_code\": \"da1\"\n            }\n        }\n    ],\n    \"rate_awards\": [\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы 1 день пьете свою норму воды\",\n                \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n                \"photo_code\": \"dr1\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы 2 дней пьете свою норму воды\",\n                \"text\": \"Второй день с водой — вы отлично идете!\",\n                \"photo_code\": \"dr2\"\n            }\n        }\n    ],\n    \"single_awards\": [\n        {\n            \"award\": {\n                \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n                \"photo_code\": \"s1\"\n            }\n        }\n    ]\n}",
+          "content": "{\n    \"drink_awards\": [\n        {\n            \"counter\": 0,\n            \"percent\": 62,\n            \"award\": {\n                \"title\": \"Почти аквариум!\",\n                \"text\": \"За последнее время вы выпили 40 л воды. Обычно такой объем у домашнего аквариума :)\n                \"photo_code\": \"wd2\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"percent\": 100,\n            \"award\": {\n                \"title\": \"Ваши первые 2 л!\",\n                \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n                \"photo_code\": \"wd1\"\n            }\n        }\n    ],\n    \"active_awards\": [\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 7 дней\",\n                \"text\": \"Вы пользуетесь приложением 7 дней. Отличный результат!\",\n                \"photo_code\": \"da2\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 1 дней\",\n                \"text\": \"Поздравляем и увидимся завтра!\",\n                \"photo_code\": \"da1\"\n            }\n        }\n    ],\n    \"rate_awards\": [\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы 1 день пьете свою норму воды\",\n                \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n                \"photo_code\": \"dr1\"\n            }\n        },\n        {\n            \"counter\": 0,\n            \"award\": {\n                \"title\": \"Вы 2 дней пьете свою норму воды\",\n                \"text\": \"Второй день с водой — вы отлично идете!\",\n                \"photo_code\": \"dr2\"\n            }\n        }\n    ],\n    \"single_awards\": [\n        {\n            \"award\": {\n                \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n                \"photo_code\": \"s1\"\n            }\n        }\n    ]\n}",
           "type": "json"
         }
       ],
@@ -1718,6 +1718,91 @@ define({ "api": [
             "optional": false,
             "field": "short_link",
             "description": "<p>Краткая ссылка</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "benefits",
+    "group": "Основные",
+    "filename": "jsay/apps/core/rest/v1/api.py",
+    "groupTitle": "Основные"
+  },
+  {
+    "type": "get",
+    "url": "core/tariffs/",
+    "title": "Тарифные планы",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"title\": \"Безлимит\",\n        \"cost\": 1200,\n        \"price_per_month\": 0,\n        \"month\": 0,\n        \"unlimited\": true,\n        \"discount\": 0\n    },\n    {\n        \"title\": \"1 месяц\",\n        \"cost\": 99,\n        \"price_per_month\": 99,\n        \"month\": 1,\n        \"unlimited\": false,\n        \"discount\": 0\n    },\n    {\n        \"title\": \"6 месяцев\",\n        \"cost\": 499,\n        \"price_per_month\": 99,\n        \"month\": 6,\n        \"unlimited\": false,\n        \"discount\": 16\n    },\n    {\n        \"title\": \"12 месяцев\",\n        \"cost\": 899,\n        \"price_per_month\": 99,\n        \"month\": 12,\n        \"unlimited\": false,\n        \"discount\": 25\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Название тарифа</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "cost",
+            "description": "<p>Фактическая цена</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "price_per_month",
+            "description": "<p>Цена за месяц</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "month",
+            "description": "<p>Количество месяцев</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "unlimited",
+            "description": "<p>Безлимитный <code>True</code> - Да, <code>False</code> - Нет</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "discount",
+            "description": "<p>Процент скидки</p>"
           }
         ]
       }
