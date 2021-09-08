@@ -1049,6 +1049,13 @@
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_awards.award.users_percent",
+            "description": "<p>Актуальный процент пользователей</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "active_awards",
@@ -1102,6 +1109,13 @@
             "optional": false,
             "field": "active_awards.award.photo_code",
             "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "active_awards.award.users_percent",
+            "description": "<p>Актуальный процент пользователей</p>"
           },
           {
             "group": "Response",
@@ -1161,6 +1175,13 @@
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "rate_awards.award.users_percent",
+            "description": "<p>Актуальный процент пользователей</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "single_awards",
@@ -1200,6 +1221,13 @@
             "optional": false,
             "field": "single_awards.award.photo_code",
             "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.award.users_percent",
+            "description": "<p>Актуальный процент пользователей</p>"
           }
         ]
       }
