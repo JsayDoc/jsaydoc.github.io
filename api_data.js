@@ -971,7 +971,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"drink_awards\": [\n        {\n            \"counter\": 0,\n            \"percent\": 62,\n            \"volume\": 2000,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"award\": {\n                \"title\": \"Почти аквариум!\",\n                \"text\": \"За последнее время вы выпили 40 л воды. Обычно такой объем у домашнего аквариума :)\"\n                \"photo_code\": \"wd2\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"percent\": 100,\n            \"volume\": 40000,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 70,\n            \"award\": {\n                \"title\": \"Ваши первые 2 л!\",\n                \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n                \"photo_code\": \"wd1\",\n                \"users_percent\": 70\n            }\n        },\n        {\n            \"award\": {\n                \"title\": \"Это уровень бойлера!\",\n                \"text\": \"Помните, как он выглядит? В нем тоже 100 л воды — столько вы выпили за последнее время!\",\n                \"photo_code\": \"wd3\",\n                \"users_percent\": 0\n            }\n        }\n    ],\n    \"active_awards\": [\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 80,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 7 дней\",\n                \"text\": \"Вы пользуетесь приложением 7 дней. Отличный результат!\",\n                \"photo_code\": \"da2\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 1 дней\",\n                \"text\": \"Поздравляем и увидимся завтра!\",\n                \"photo_code\": \"da1\",\n                \"users_percent\": 70\n            }\n        }\n    ],\n    \"rate_awards\": [\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 80,\n            \"award\": {\n                \"title\": \"Вы 1 день пьете свою норму воды\",\n                \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n                \"photo_code\": \"dr1\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"award\": {\n                \"title\": \"Вы 2 дней пьете свою норму воды\",\n                \"text\": \"Второй день с водой — вы отлично идете!\",\n                \"photo_code\": \"dr2\",\n                \"users_percent\": 70\n            }\n        }\n    ],\n    \"single_awards\": [\n        {\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 90,\n            \"award\": {\n                \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n                \"photo_code\": \"s1\",\n                \"users_percent\": 50\n            }\n        }\n    ]\n}",
+          "content": "{\n    \"drink_awards\": [\n        {\n            \"counter\": 0,\n            \"percent\": 62,\n            \"volume\": 2000,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"created\": 1630698909,\n            \"award\": {\n                \"title\": \"Почти аквариум!\",\n                \"text\": \"За последнее время вы выпили 40 л воды. Обычно такой объем у домашнего аквариума :)\"\n                \"photo_code\": \"wd2\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"percent\": 100,\n            \"volume\": 40000,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 70,\n            \"created\": 1630698910,\n            \"award\": {\n                \"title\": \"Ваши первые 2 л!\",\n                \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n                \"photo_code\": \"wd1\",\n                \"users_percent\": 70\n            }\n        },\n        {\n            \"award\": {\n                \"title\": \"Это уровень бойлера!\",\n                \"text\": \"Помните, как он выглядит? В нем тоже 100 л воды — столько вы выпили за последнее время!\",\n                \"photo_code\": \"wd3\",\n                \"users_percent\": 0\n            }\n        }\n    ],\n    \"active_awards\": [\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 80,\n            \"created\": 1730698909,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 7 дней\",\n                \"text\": \"Вы пользуетесь приложением 7 дней. Отличный результат!\",\n                \"photo_code\": \"da2\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"created\": 1830698909,\n            \"award\": {\n                \"title\": \"Вы пользуетесь приложением 1 дней\",\n                \"text\": \"Поздравляем и увидимся завтра!\",\n                \"photo_code\": \"da1\",\n                \"users_percent\": 70\n            }\n        }\n    ],\n    \"rate_awards\": [\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 80,\n            \"created\": 1530698909,\n            \"award\": {\n                \"title\": \"Вы 1 день пьете свою норму воды\",\n                \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n                \"photo_code\": \"dr1\",\n                \"users_percent\": 50\n            }\n        },\n        {\n            \"counter\": 0,\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 100,\n            \"created\": 1650698909,\n            \"award\": {\n                \"title\": \"Вы 2 дней пьете свою норму воды\",\n                \"text\": \"Второй день с водой — вы отлично идете!\",\n                \"photo_code\": \"dr2\",\n                \"users_percent\": 70\n            }\n        }\n    ],\n    \"single_awards\": [\n        {\n            \"date\": \"2021-09-03\",\n            \"users_percent\": 90,\n            \"created\": 1770698909,\n            \"award\": {\n                \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n                \"photo_code\": \"s1\",\n                \"users_percent\": 50\n            }\n        }\n    ]\n}",
           "type": "json"
         }
       ],
@@ -1018,6 +1018,13 @@ define({ "api": [
             "optional": false,
             "field": "drink_awards.users_percent",
             "description": "<p>Процент пользователей</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "drink_awards.created",
+            "description": "<p>День получения в timestamp, для выборки последнего</p>"
           },
           {
             "group": "Response",
@@ -1084,6 +1091,13 @@ define({ "api": [
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "active_awards.created",
+            "description": "<p>День получения в timestamp, для выборки последнего</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "active_awards.award",
@@ -1147,6 +1161,13 @@ define({ "api": [
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "rate_awards.created",
+            "description": "<p>День получения в timestamp, для выборки последнего</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "rate_awards.award",
@@ -1200,6 +1221,13 @@ define({ "api": [
             "optional": false,
             "field": "single_awards.users_percent",
             "description": "<p>Процент пользователей</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.created",
+            "description": "<p>День получения в timestamp, для выборки последнего</p>"
           },
           {
             "group": "Response",
