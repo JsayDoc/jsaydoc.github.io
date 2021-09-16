@@ -1,6 +1,69 @@
 [
   {
     "type": "post",
+    "url": "account/single_award/create/",
+    "title": "Создать достижение",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Достижение создано\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Достижение создано</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "create_single_award",
+    "group": "user_achievements",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "award_type",
+            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "user_achievements"
+  },
+  {
+    "type": "post",
     "url": "accounts/status_active/",
     "title": "Статус и активность пользователя",
     "success": {
@@ -1084,6 +1147,13 @@
           },
           {
             "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "drink_awards.award.repeat",
+            "description": "<p>Повторяемый <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "active_awards",
@@ -1179,6 +1249,13 @@
             "optional": false,
             "field": "active_awards.award.day",
             "description": "<p>День серии</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "active_awards.award.repeat",
+            "description": "<p>Повторяемый <code>True</code> - да, <code>False</code> - нет</p>"
           },
           {
             "group": "Response",
@@ -1280,6 +1357,13 @@
           },
           {
             "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "rate_awards.award.repeat",
+            "description": "<p>Повторяемый <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "single_awards",
@@ -1361,6 +1445,13 @@
             "optional": false,
             "field": "single_awards.award.name",
             "description": "<p>Заголовок для рассказать друзьям</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "single_awards.award.repeat",
+            "description": "<p>Повторяемый <code>True</code> - да, <code>False</code> - нет</p>"
           },
           {
             "group": "Response",
