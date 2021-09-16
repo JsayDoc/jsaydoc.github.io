@@ -1,69 +1,6 @@
 [
   {
     "type": "post",
-    "url": "account/single_award/create/",
-    "title": "Создать достижение",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    \"message\": \"Достижение создано\"\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Response": [
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Достижение создано</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.0.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>User Bearer Token.</p>"
-          }
-        ]
-      }
-    },
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access rights needed.",
-        "description": "<p>Permission is granted to modify user objects.</p>"
-      }
-    ],
-    "name": "create_single_award",
-    "group": "user_achievements",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "award_type",
-            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв</p>"
-          }
-        ]
-      }
-    },
-    "filename": "jsay/apps/account/rest/v1/api.py",
-    "groupTitle": "user_achievements"
-  },
-  {
-    "type": "post",
     "url": "accounts/status_active/",
     "title": "Статус и активность пользователя",
     "success": {
@@ -757,6 +694,69 @@
     },
     "filename": "jsay/apps/account/rest/v1/urls.py",
     "groupTitle": "Аутентификация"
+  },
+  {
+    "type": "post",
+    "url": "account/single_award/create/",
+    "title": "Создать достижение",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Достижение создано\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Достижение создано</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "create_single_award",
+    "group": "Вода_и_достижения",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "award_type",
+            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв</p>"
+          }
+        ]
+      }
+    },
+    "filename": "jsay/apps/account/rest/v1/api.py",
+    "groupTitle": "Вода_и_достижения"
   },
   {
     "type": "post",
