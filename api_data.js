@@ -697,7 +697,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "account/single_award/create/",
+    "url": "accounts/account/single_award/create/",
     "title": "Создать достижение",
     "success": {
       "examples": [
