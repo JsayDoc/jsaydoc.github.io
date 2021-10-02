@@ -1696,95 +1696,6 @@
     "groupTitle": "Напоминания"
   },
   {
-    "type": "post",
-    "url": "notification/create/",
-    "title": "Создание",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "1.0.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>User Bearer Token.</p>"
-          }
-        ]
-      }
-    },
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access rights needed.",
-        "description": "<p>Permission is granted to modify user objects.</p>"
-      }
-    ],
-    "name": "notice_create",
-    "group": "Напоминания",
-    "description": "<p>Создание настроек напоминания пользователя. Если напоминание уже существует в ответе будет возвращаться предупреждение об этом, в тоже время HTTP ответ будет <code>200</code>, как и в случае создания.</p>",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "allowedValues": [
-              "hh:mm"
-            ],
-            "optional": false,
-            "field": "start_notice",
-            "description": "<p>Время первого напоминания</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "allowedValues": [
-              "hh:mm"
-            ],
-            "optional": false,
-            "field": "end_notice",
-            "description": "<p>Время последнего напоминания</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "period",
-            "description": "<p>Напоминать каждые N часа, значение в минутах</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": true,
-            "field": "sound",
-            "defaultValue": "False",
-            "description": "<p>Звук уведомления, <code>True</code> - включен, <code>False</code> - отключен</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": true,
-            "field": "active",
-            "defaultValue": "False",
-            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
-          }
-        ]
-      }
-    },
-    "filename": "jsay/apps/notification/rest/v1/api.py",
-    "groupTitle": "Напоминания"
-  },
-  {
     "type": "get",
     "url": "notification/list/",
     "title": "Просмотр",
@@ -1864,7 +1775,7 @@
   },
   {
     "type": "patch",
-    "url": "notification/update/:id/",
+    "url": "notification/update/",
     "title": "Редактирование",
     "success": {
       "examples": [
