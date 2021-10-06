@@ -1624,7 +1624,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"registration_id\": \"UID090974679\",\n    \"device_id\": \"f6e47bd0-e019-11eb-ba80-0242ac130004\",\n    \"device\": \"ios\",\n    \"active\": true\n}",
+          "content": "{\n    \"registration_id\": \"UID090974679\",\n    \"device_id\": \"f6e47bd0-e019-11eb-ba80-0242ac130004\",\n    \"device\": \"ios\"\n}",
           "type": "json"
         }
       ]
@@ -1679,15 +1679,7 @@ define({ "api": [
             ],
             "optional": false,
             "field": "device",
-            "description": "<p>Тип устройства</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": true,
-            "field": "active",
-            "defaultValue": "True",
-            "description": "<p>Статус уведомлений, <code>True</code> - включен, <code>False</code> - отключен</p>"
+            "description": "<p>Тип устройства <code>False</code> - отключен</p>"
           }
         ]
       }
@@ -1703,7 +1695,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true,\n    \"drink_status\": true\n}",
           "type": "json"
         }
       ],
@@ -1742,6 +1734,13 @@ define({ "api": [
             "type": "Boolean",
             "optional": false,
             "field": "active",
+            "description": "<p>Напоминания <code>True</code> - включен, <code>False</code> - отключен</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "drink_status",
             "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
           }
         ]
@@ -1781,10 +1780,28 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true,\n    \"drink_status\": true\n}",
           "type": "json"
         }
-      ]
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "active",
+            "description": "<p>Напоминания <code>True</code> - включен, <code>False</code> - отключен</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "drink_status",
+            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
+          }
+        ]
+      }
     },
     "version": "1.0.0",
     "header": {
@@ -1845,13 +1862,6 @@ define({ "api": [
             "optional": true,
             "field": "sound",
             "description": "<p>Звук уведомления, <code>True</code> - включен, <code>False</code> - отключен</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": true,
-            "field": "active",
-            "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
           }
         ]
       }
