@@ -1679,7 +1679,14 @@ define({ "api": [
             ],
             "optional": false,
             "field": "device",
-            "description": "<p>Тип устройства <code>False</code> - отключен</p>"
+            "description": "<p>Тип устройства</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "login",
+            "description": "<p>Статус авторизации пользователя в системе, <code>True</code> - вход, <code>False</code> - выход</p>"
           }
         ]
       }
@@ -1695,7 +1702,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true,\n    \"drink_status\": true\n}",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
           "type": "json"
         }
       ],
@@ -1734,13 +1741,6 @@ define({ "api": [
             "type": "Boolean",
             "optional": false,
             "field": "active",
-            "description": "<p>Напоминания <code>True</code> - включен, <code>False</code> - отключен</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Boolean",
-            "optional": false,
-            "field": "drink_status",
             "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
           }
         ]
@@ -1780,7 +1780,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true,\n    \"drink_status\": true\n}",
+          "content": "{\n    \"id\": 1,\n    \"start_notice\": \"09:00:00\",\n    \"end_notice\": \"19:00:00\",\n    \"period\": 120,\n    \"sound\": false,\n    \"active\": true\n}",
           "type": "json"
         }
       ]
@@ -1850,13 +1850,6 @@ define({ "api": [
             "type": "Boolean",
             "optional": true,
             "field": "active",
-            "description": "<p>Напоминания <code>True</code> - включен, <code>False</code> - отключен</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": true,
-            "field": "drink_status",
             "description": "<p>Напоминания выпить воду <code>True</code> - включен, <code>False</code> - отключен</p>"
           }
         ]
