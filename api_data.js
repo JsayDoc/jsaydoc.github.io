@@ -389,6 +389,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "weight",
+            "description": "<p>Вес</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "allowedValues": [
               "1",
@@ -617,6 +624,13 @@ define({ "api": [
             "optional": true,
             "field": "water",
             "description": "<p>Норма воды</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "weight",
+            "description": "<p>Вес</p>"
           },
           {
             "group": "Parameter",
@@ -2221,7 +2235,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"newsletters\": true,\n    \"bottles\": [100, 200, 300, 500],\n    \"auth_status\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
+          "content": "{\n    \"id\": 1,\n    \"first_name\": \"Егор\",\n    \"email\": \"egor@example.com\",\n    \"water\": 1500,\n    \"weight\": 75,\n    \"gender\": \"1\",\n    \"newsletters\": true,\n    \"bottles\": [100, 200, 300, 500],\n    \"auth_status\": {\n        \"social\": true,\n        \"provider\": \"facebook\"\n    }\n}",
           "type": "json"
         }
       ],
@@ -2275,6 +2289,13 @@ define({ "api": [
             "optional": false,
             "field": "water",
             "description": "<p>Норма воды</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "weight",
+            "description": "<p>Вес пользователя</p>"
           },
           {
             "group": "Response",
@@ -2334,7 +2355,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"first_name\": \"Егор\",\n    \"water\": 1500,\n    \"gender\": \"1\",\n    \"bottles\": [100, 300, 500, 1000],\n    \"newsletters\": true\n}",
+          "content": "{\n    \"first_name\": \"Егор\",\n    \"water\": 1500,\n    \"weight\": 75,\n    \"gender\": \"1\",\n    \"bottles\": [100, 300, 500, 1000],\n    \"newsletters\": true\n}",
           "type": "json"
         }
       ]
@@ -2378,6 +2399,13 @@ define({ "api": [
             "optional": true,
             "field": "water",
             "description": "<p>Норма воды</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "weight",
+            "description": "<p>Вес пользователя</p>"
           },
           {
             "group": "Parameter",
