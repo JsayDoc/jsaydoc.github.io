@@ -113,6 +113,13 @@
             "group": "Response",
             "type": "Boolean",
             "optional": false,
+            "field": "maintenance",
+            "description": "<p>Технические работы <code>True</code> - Да, <code>False</code> - Нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
             "field": "check_email",
             "description": "<p>Статус почты <code>True</code> - необходима проверка, <code>False</code> - проверка не требуется</p>"
           },
