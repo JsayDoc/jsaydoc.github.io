@@ -118,6 +118,13 @@
           },
           {
             "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "maintenance_text",
+            "description": "<p>Текст технических работ</p>"
+          },
+          {
+            "group": "Response",
             "type": "Boolean",
             "optional": false,
             "field": "check_email",
