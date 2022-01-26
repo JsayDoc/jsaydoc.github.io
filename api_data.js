@@ -284,6 +284,14 @@ define({ "api": [
             "optional": false,
             "field": "password",
             "description": "<p>Пароль пользователя, минимум <code>6</code> символов (минимум <code>1</code> цифра и <code>1</code> буква)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Floatfield",
+            "optional": true,
+            "field": "tz",
+            "defaultValue": "0",
+            "description": "<p>Часовой пояс</p>"
           }
         ]
       }
@@ -433,6 +441,14 @@ define({ "api": [
             "field": "newsletters",
             "defaultValue": "True",
             "description": "<p>Подписка на новости</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Floatfield",
+            "optional": true,
+            "field": "tz",
+            "defaultValue": "0",
+            "description": "<p>Часовой пояс</p>"
           }
         ]
       }
@@ -671,6 +687,14 @@ define({ "api": [
             "field": "newsletters",
             "defaultValue": "True",
             "description": "<p>Подписка на новости</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Floatfield",
+            "optional": true,
+            "field": "tz",
+            "defaultValue": "0",
+            "description": "<p>Часовой пояс</p>"
           }
         ]
       }
@@ -785,7 +809,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "award_type",
-            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв</p>"
+            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв, <code>4</code> - Здоровье, <code>5</code> - Часы, <code>6</code> - Первый пуш</p>"
           }
         ]
       }
