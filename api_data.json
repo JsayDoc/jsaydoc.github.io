@@ -809,7 +809,7 @@
             "type": "Number",
             "optional": false,
             "field": "award_type",
-            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв, <code>4</code> - Здоровье, <code>5</code> - Часы, <code>6</code> - Первый пуш</p>"
+            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв, <code>4</code> - Здоровье, <code>5</code> - Первый пуш</p>"
           }
         ]
       }
