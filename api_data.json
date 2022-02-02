@@ -2536,6 +2536,15 @@
         ]
       }
     },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n    \"old_password\": \"Неправильный пароль\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "1.0.0",
     "header": {
       "fields": {
@@ -2563,6 +2572,13 @@
     "parameter": {
       "fields": {
         "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "old_password",
+            "description": "<p>Старый пароль</p>"
+          },
           {
             "group": "Parameter",
             "type": "String",
