@@ -809,7 +809,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "award_type",
-            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв, <code>4</code> - Здоровье, <code>5</code> - Первый пуш</p>"
+            "description": "<p>Тип достижения, <code>1</code> - Подписка, <code>2</code> - Чат, <code>3</code> - Отзыв, <code>4</code> - Киберводяной, <code>5</code> - Первый пуш</p>"
           }
         ]
       }
@@ -825,7 +825,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        }\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        }\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        }\n    }\n}",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        }\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        }\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        }\n    }\n}",
           "type": "json"
         },
         {
@@ -861,7 +861,7 @@ define({ "api": [
             "group": "Response",
             "type": "Number",
             "optional": false,
-            "field": "daily_norm.percent",
+            "field": "daily_norm.users_percent",
             "description": "<p>Процент пользователей, которые достигли дневной цели</p>"
           },
           {
@@ -889,7 +889,7 @@ define({ "api": [
             "group": "Response",
             "type": "Number",
             "optional": false,
-            "field": "first_drink.percent",
+            "field": "first_drink.users_percent",
             "description": "<p>Процент пользователей, которые достигли дневной цели</p>"
           },
           {
@@ -938,7 +938,7 @@ define({ "api": [
             "group": "Response",
             "type": "Number",
             "optional": false,
-            "field": "drink_award.percent",
+            "field": "drink_award.users_percent",
             "description": "<p>Процент пользователей получивших достижение</p>"
           },
           {
@@ -994,7 +994,7 @@ define({ "api": [
             "group": "Response",
             "type": "Number",
             "optional": false,
-            "field": "daily_rate.percent",
+            "field": "daily_rate.users_percent",
             "description": "<p>Процент пользователей получивших достижение</p>"
           },
           {
