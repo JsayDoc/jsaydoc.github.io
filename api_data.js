@@ -545,7 +545,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "message",
-            "description": "<p>Новый пароль отправлен на почту</p>"
+            "description": "<p>Ссылка для подтверждения отправлена на почту</p>"
           }
         ]
       }
@@ -566,7 +566,7 @@ define({ "api": [
         ]
       }
     },
-    "description": "<p>Если пользователь есть в системе отправляем новый пароль, если нет отправляем приглашение</p>",
+    "description": "<p>Если пользователь есть в системе отправляем ссылку для подтверждения на почту, если нет отправляем приглашение</p>",
     "filename": "water/apps/account/rest/v1/api.py",
     "groupTitle": "Аутентификация"
   },
@@ -2540,7 +2540,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"old_password\": \"Неправильный пароль\"\n}",
+          "content": "{   \n    \"error_code\": 1, \n    \"error_message\": \"Неправильный пароль\"\n}",
           "type": "json"
         }
       ]
