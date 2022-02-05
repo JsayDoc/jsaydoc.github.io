@@ -238,12 +238,12 @@
       "examples": [
         {
           "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Неверный емейл или пароль\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"Неверный емейл или пароль\"\n}",
           "type": "json"
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
+          "content": "{\n    \"error_code\": \"2\",\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -484,7 +484,7 @@
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"30\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -612,7 +612,7 @@
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": [\n        \"400 Client Error: Bad Request for url: https://graph.facebook.com/v8.0/me?fields=id%2C+name%2C+email\"\n    ]\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": [\n        \"400 Client Error: Bad Request for url: https://graph.facebook.com/v8.0/me?fields=id%2C+name%2C+email\"\n    ]\n}",
           "type": "json"
         }
       ],
@@ -2540,7 +2540,7 @@
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{   \n    \"error_code\": 1, \n    \"error_message\": \"Неправильный пароль\"\n}",
+          "content": "{   \n    \"error_code\": \"1\", \n    \"error_message\": \"Неправильный пароль\"\n}",
           "type": "json"
         }
       ]
@@ -2620,12 +2620,12 @@
       "examples": [
         {
           "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
           "type": "json"
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
+          "content": "{\n    \"error_code\": \"2\",\n    \"error_message\": \"30\"\n}",
           "type": "json"
         }
       ],
@@ -2700,12 +2700,12 @@
       "examples": [
         {
           "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
           "type": "json"
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"Неправильный код подтверждения\"\n}",
+          "content": "{\n    \"error_code\": \"2\",\n    \"error_message\": \"Неправильный код подтверждения\"\n}",
           "type": "json"
         }
       ],
@@ -2802,17 +2802,17 @@
       "examples": [
         {
           "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
           "type": "json"
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"30\"\n}",
+          "content": "{\n    \"error_code\": \"2\",\n    \"error_message\": \"30\"\n}",
           "type": "json"
         },
         {
           "title": "3.Error-Response:",
-          "content": "{\n    \"error_code\": 3,\n    \"error_message\": \"Изменение невозможно, обратитесь в техподдержку\"\n}",
+          "content": "{\n    \"error_code\": \"3\",\n    \"error_message\": \"Изменение невозможно, обратитесь в техподдержку\"\n}",
           "type": "json"
         }
       ],
@@ -2906,12 +2906,12 @@
       "examples": [
         {
           "title": "1.Error-Response:",
-          "content": "{\n    \"error_code\": 1,\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
+          "content": "{\n    \"error_code\": \"1\",\n    \"error_message\": \"Смена емейла заблокирована на 24 часа\"\n}",
           "type": "json"
         },
         {
           "title": "2.Error-Response:",
-          "content": "{\n    \"error_code\": 2,\n    \"error_message\": \"Неправильный код подтверждения\"\n}",
+          "content": "{\n    \"error_code\": \"2\",\n    \"error_message\": \"Неправильный код подтверждения\"\n}",
           "type": "json"
         }
       ],
