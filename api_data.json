@@ -2927,69 +2927,6 @@
         "Response": [
           {
             "group": "Response",
-            "type": "Object",
-            "optional": false,
-            "field": "daily_active",
-            "description": "<p>Достижение активности</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Boolean",
-            "optional": false,
-            "field": "daily_active.notify",
-            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "daily_active.users_percent",
-            "description": "<p>Процент пользователей получивших достижение</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "daily_active.date",
-            "description": "<p>День достижения</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Object",
-            "optional": false,
-            "field": "daily_active.award",
-            "description": "<p>Достижение</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "daily_active.award.title",
-            "description": "<p>Название достижения</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "daily_active.award.text",
-            "description": "<p>Текст поздравления</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "daily_active.award.photo_code",
-            "description": "<p>Код миниатюры</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "daily_active.award.icon",
-            "description": "<p>Ссылка на миниатюру</p>"
-          },
-          {
-            "group": "Response",
             "type": "List",
             "optional": false,
             "field": "single_awards",
@@ -3071,6 +3008,69 @@
             "optional": false,
             "field": "single_awards.award.name",
             "description": "<p>Текст рассказать друзьям</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_active",
+            "description": "<p>Достижение активности</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "daily_active.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_active.users_percent",
+            "description": "<p>Процент пользователей получивших достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_active.date",
+            "description": "<p>День достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_active.award",
+            "description": "<p>Достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_active.award.title",
+            "description": "<p>Название достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_active.award.text",
+            "description": "<p>Текст поздравления</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_active.award.photo_code",
+            "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_active.award.icon",
+            "description": "<p>Ссылка на миниатюру</p>"
           }
         ]
       }
@@ -3203,7 +3203,7 @@
           },
           {
             "group": "Response",
-            "type": "Object[]",
+            "type": "List",
             "optional": false,
             "field": "bottles",
             "description": "<p>Бутылки пользователя</p>"
