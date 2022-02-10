@@ -2927,7 +2927,7 @@
         "Response": [
           {
             "group": "Response",
-            "type": "List",
+            "type": "Object",
             "optional": false,
             "field": "single_awards",
             "description": "<p>Список одиночных достижений</p>"
