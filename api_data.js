@@ -2587,7 +2587,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "health/list/",
-    "title": "Просмотр",
+    "title": "Просмотр часов и здоровья",
     "success": {
       "examples": [
         {
@@ -2850,7 +2850,7 @@ define({ "api": [
   {
     "type": "patch",
     "url": "health/update/",
-    "title": "Редактирование",
+    "title": "Редактирование часов и здоровья",
     "success": {
       "examples": [
         {
@@ -2927,7 +2927,7 @@ define({ "api": [
         "Response": [
           {
             "group": "Response",
-            "type": "List",
+            "type": "Object[]",
             "optional": false,
             "field": "single_awards",
             "description": "<p>Список одиночных достижений</p>"
