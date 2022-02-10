@@ -2927,31 +2927,10 @@
         "Response": [
           {
             "group": "Response",
-            "type": "Object[]",
+            "type": "Object",
             "optional": false,
             "field": "single_awards",
             "description": "<p>Список одиночных достижений</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "single_awards.date",
-            "description": "<p>День достижения</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "single_awards.users_percent",
-            "description": "<p>Процент пользователей получивших достижение</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "single_awards.created",
-            "description": "<p>День получения в timestamp</p>"
           },
           {
             "group": "Response",
@@ -3008,6 +2987,27 @@
             "optional": false,
             "field": "single_awards.award.name",
             "description": "<p>Текст рассказать друзьям</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.date",
+            "description": "<p>День достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "single_awards.users_percent",
+            "description": "<p>Процент пользователей получивших достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.created",
+            "description": "<p>День получения в timestamp</p>"
           },
           {
             "group": "Response",
