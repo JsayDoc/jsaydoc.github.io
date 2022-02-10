@@ -2934,6 +2934,27 @@ define({ "api": [
           },
           {
             "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "single_awards.users_percent",
+            "description": "<p>Процент пользователей получивших достижение</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.date",
+            "description": "<p>День достижения</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "single_awards.created",
+            "description": "<p>День получения в timestamp</p>"
+          },
+          {
+            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "single_awards.award",
@@ -2987,27 +3008,6 @@ define({ "api": [
             "optional": false,
             "field": "single_awards.award.name",
             "description": "<p>Текст рассказать друзьям</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "single_awards.users_percent",
-            "description": "<p>Процент пользователей получивших достижение</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "single_awards.date",
-            "description": "<p>День достижения</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "single_awards.created",
-            "description": "<p>День получения в timestamp</p>"
           },
           {
             "group": "Response",
