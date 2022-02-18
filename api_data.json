@@ -558,6 +558,117 @@
     "groupTitle": "Аутентификация"
   },
   {
+    "type": "get",
+    "url": "core/android/video/instructions/",
+    "title": "Android watch инструкции",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"title\": \"Пример 1\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/1.mp4\"\n    },\n    {\n        \"title\": \"Пример 2\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/2.mp4\"\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Название</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "file",
+            "description": "<p>Ссылка на файл</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "get_android_videoinstructions",
+    "group": "Видеоинструкции",
+    "filename": "water/apps/core/rest/v1/api.py",
+    "groupTitle": "Видеоинструкции"
+  },
+  {
+    "type": "get",
+    "url": "core/apple/video/instructions/",
+    "title": "Apple watch инструкции",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"title\": \"Пример 1\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/1.mp4\"\n    },\n    {\n        \"title\": \"Пример 2\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/2.mp4\"\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Название</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "file",
+            "description": "<p>Ссылка на файл</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "get_apple_videoinstructions",
+    "group": "Видеоинструкции",
+    "filename": "water/apps/core/rest/v1/api.py",
+    "groupTitle": "Видеоинструкции"
+  },
+  {
+    "type": "get",
+    "url": "core/video/instructions/",
+    "title": "Видео инструкции",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"title\": \"Пример 1\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/1.mp4\"\n    },\n    {\n        \"title\": \"Пример 2\",\n        \"file\": \"https://dev.api.water.jsay.ru/media/core/video/instructions/2.mp4\"\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>Название</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "file",
+            "description": "<p>Ссылка на файл</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "get_videoinstructions",
+    "group": "Видеоинструкции",
+    "filename": "water/apps/core/rest/v1/api.py",
+    "groupTitle": "Видеоинструкции"
+  },
+  {
     "type": "post",
     "url": "accounts/account/single_award/create/",
     "title": "Создать достижение",
