@@ -3236,7 +3236,7 @@
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
+          "content": "{\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
           "type": "json"
         }
       ],
@@ -3318,6 +3318,13 @@
             "optional": false,
             "field": "bottles",
             "description": "<p>Бутылки пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "enable_push",
+            "description": "<p>Предложить вкл. пуши, <code>True</code> - Да, <code>False</code> - Нет</p>"
           }
         ]
       }
