@@ -836,7 +836,7 @@ define({ "api": [
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Dict",
             "optional": false,
             "field": "first_drink.award.json",
             "description": "<p>Анимация</p>"
@@ -899,7 +899,7 @@ define({ "api": [
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Dict",
             "optional": false,
             "field": "drink_award.award.json",
             "description": "<p>Анимация</p>"
@@ -962,7 +962,7 @@ define({ "api": [
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Dict",
             "optional": false,
             "field": "daily_rate.award.json",
             "description": "<p>Анимация</p>"
