@@ -739,7 +739,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\"\n        }\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\"\n        }\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\"\n        }\n    },\n    \"health\": true\n}",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"first_drink\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"text\": \"Первый пошёл: вы записали свой первый стакан воды. Продолжайте!\",\n            \"photo_code\": \"s1\",\n            \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n        }\n    },\n    \"drink_award\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Ваши первые 2 л!\",\n            \"text\": \"Продолжайте в том же духе и почувствуете себя лучше уже очень скоро.\",\n            \"photo_code\": \"wd1\",\n            \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n        }\n    },\n    \"daily_rate\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\",\n        \"award\": {\n            \"title\": \"Вы 1 день пьете свою норму воды\",\n            \"text\": \"Сегодня вы выпили свою нормы воды. Увидимся завтра!\",\n            \"photo_code\": \"dr1\",\n            \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n        }\n    },\n    \"health\": true\n}",
           "type": "json"
         },
         {
@@ -838,6 +838,13 @@ define({ "api": [
             "group": "Response",
             "type": "Object",
             "optional": false,
+            "field": "first_drink.award.json",
+            "description": "<p>Анимация</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
             "field": "drink_award",
             "description": "<p>Достижение выпитой воды</p>"
           },
@@ -894,6 +901,13 @@ define({ "api": [
             "group": "Response",
             "type": "Object",
             "optional": false,
+            "field": "drink_award.award.json",
+            "description": "<p>Анимация</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
             "field": "daily_rate",
             "description": "<p>Достижение дневной нормы</p>"
           },
@@ -945,6 +959,13 @@ define({ "api": [
             "optional": false,
             "field": "daily_rate.award.photo_code",
             "description": "<p>Код миниатюры</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_rate.award.json",
+            "description": "<p>Анимация</p>"
           },
           {
             "group": "Response",
@@ -3025,7 +3046,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"daily_active\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-08\",\n        \"award\": {\n            \"title\": \"Вы пользуетесь приложением 1 дней\",\n            \"text\": \"Поздравляем и увидимся завтра!\",\n            \"photo_code\": \"da1\",\n            \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\"\n        }\n    },\n    \"single_awards\": [\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 100,\n            \"created\": 1644515943,\n            \"award\": {\n                \"title\": \"Киберводяной\",\n                \"text\": \"Теперь точно всё готово: все дополнительные модули подключены!\",\n                \"photo_code\": \"s8\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы подключили все функции приложения!\",\n                \"condition\": \"Пользователь подключил все доп. модули в приложении (Watch, Health)\",\n                \"name\": \"Я подключил(а) все функции приложения!\",\n                \"repeat\": false\n            }\n        },\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 30,\n            \"created\": 1644519478,\n            \"award\": {\n                \"title\": \"Слова — вода\",\n                \"text\": \"Первое сообщение написано! Здорово, что вы решили обратиться в чат приложения.\",\n                \"photo_code\": \"s5\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы написали в чате свое первое сообщение\",\n                \"condition\": \"Пользователь впервые написал в чат в приложении\",\n                \"name\": \"Я написал(а) в чате свое первое сообщение\",\n                \"repeat\": false\n            }\n        }\n    ]\n}",
+          "content": "{\n    \"daily_active\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-08\",\n        \"award\": {\n            \"title\": \"Вы пользуетесь приложением 1 дней\",\n            \"text\": \"Поздравляем и увидимся завтра!\",\n            \"photo_code\": \"da1\",\n            \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n            \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n        }\n    },\n    \"single_awards\": [\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 100,\n            \"created\": 1644515943,\n            \"award\": {\n                \"title\": \"Киберводяной\",\n                \"text\": \"Теперь точно всё готово: все дополнительные модули подключены!\",\n                \"photo_code\": \"s8\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы подключили все функции приложения!\",\n                \"condition\": \"Пользователь подключил все доп. модули в приложении (Watch, Health)\",\n                \"name\": \"Я подключил(а) все функции приложения!\",\n                \"repeat\": false,\n                \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n            }\n        },\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 30,\n            \"created\": 1644519478,\n            \"award\": {\n                \"title\": \"Слова — вода\",\n                \"text\": \"Первое сообщение написано! Здорово, что вы решили обратиться в чат приложения.\",\n                \"photo_code\": \"s5\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы написали в чате свое первое сообщение\",\n                \"condition\": \"Пользователь впервые написал в чат в приложении\",\n                \"name\": \"Я написал(а) в чате свое первое сообщение\",\n                \"repeat\": false,\n                \"json\": {\"v\":\"5.6.8\",\"fr\":30,\"ip\":0,\"op\":135,\"w\":1000,\"h\":1000,\"nm\":\"Stik\",\"ddd\":0}\n            }\n        }\n    ]\n}",
           "type": "json"
         },
         {
@@ -3124,6 +3145,13 @@ define({ "api": [
             "group": "Response",
             "type": "Object",
             "optional": false,
+            "field": "single_awards.award.json",
+            "description": "<p>Анимация</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
             "field": "daily_active",
             "description": "<p>Достижение активности</p>"
           },
@@ -3182,6 +3210,13 @@ define({ "api": [
             "optional": false,
             "field": "daily_active.award.icon",
             "description": "<p>Ссылка на миниатюру</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_active.award.json",
+            "description": "<p>Анимация</p>"
           }
         ]
       }
