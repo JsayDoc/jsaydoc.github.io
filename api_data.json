@@ -3143,7 +3143,7 @@
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Dict",
             "optional": false,
             "field": "single_awards.award.json",
             "description": "<p>Анимация</p>"
@@ -3213,7 +3213,7 @@
           },
           {
             "group": "Response",
-            "type": "Object",
+            "type": "Dict",
             "optional": false,
             "field": "daily_active.award.json",
             "description": "<p>Анимация</p>"
