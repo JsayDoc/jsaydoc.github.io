@@ -3271,12 +3271,33 @@
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
+          "content": "{\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"billing\": {\n        \"status\": false,\n        \"store\": \"0\"\n    },\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
           "type": "json"
         }
       ],
       "fields": {
         "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "billing",
+            "description": "<p>Информация о подписке</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "billing.status",
+            "description": "<p>Статус подписки <code>True</code> - Активна, <code>False</code> - Просроченна</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "billing.store",
+            "description": "<p>Магазин подписки <code>0</code> - Apple, <code>1</code> - Google, <code>None</code> - Ни один</p>"
+          },
           {
             "group": "Response",
             "type": "Object",
