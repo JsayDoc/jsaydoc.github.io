@@ -2243,6 +2243,149 @@ define({ "api": [
     "groupTitle": "Отзывы"
   },
   {
+    "type": "post",
+    "url": "billing/add/subscription/",
+    "title": "Создать подписку",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Чек проверен\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Чек проверен</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n    \"error_code\": 21003,\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Error Code": [
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21000",
+            "description": "<p>Запрос был отправлен – не методом POST</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21002",
+            "description": "<p>Чек поврежден, не удалось его распарсить</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21003",
+            "description": "<p>Некорректный чек, покупка не подтверждена</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21004",
+            "description": "<p>Ваш Shared Secret некорректный или не соответствует чеку</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21005",
+            "description": "<p>Сервер эпла не смог обработать ваш запрос, стоит попробовать еще раз</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21006",
+            "description": "<p>Чек недействителен</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21007",
+            "description": "<p>Чек из SandBox (тестовой среды), но был отправлен в prod</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21008",
+            "description": "<p>Чек из прода, но был отправлен в тестовую среду</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21009",
+            "description": "<p>Сервер эпла не смог обработать ваш запрос, стоит попробовать еще раз</p>"
+          },
+          {
+            "group": "Error Code",
+            "optional": false,
+            "field": "21010",
+            "description": "<p>Аккаунт был удален</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "add_subscription",
+    "group": "Подписки",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "store",
+            "description": "<p>Магазин, <code>0</code> - Apple, <code>1</code> - Google</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "registration_id",
+            "description": "<p>Чек полученный от магазина</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/billing/rest/v1/api.py",
+    "groupTitle": "Подписки"
+  },
+  {
     "type": "get",
     "url": "accounts/account/",
     "title": "Просмотр данных",
