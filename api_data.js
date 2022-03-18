@@ -3525,7 +3525,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"billing\": true,\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
+          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1647196945.0,\n        \"status\": true\n    },\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
           "type": "json"
         }
       ],
@@ -3537,6 +3537,27 @@ define({ "api": [
             "optional": false,
             "field": "daily_water",
             "description": "<p>Информация о выпитой воде</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "subscription",
+            "description": "<p>Информация о подписке</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "subscription.expiry_date",
+            "description": "<p>Дата окончания подписки в Unixtime</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "subscription.status",
+            "description": "<p>Есть подписка <code>True</code> - Да, <code>False</code> - Нет</p>"
           },
           {
             "group": "Response",
