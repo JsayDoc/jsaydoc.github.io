@@ -2054,78 +2054,6 @@
     "groupTitle": "Основные"
   },
   {
-    "type": "get",
-    "url": "core/tariffs/",
-    "title": "Тарифные планы",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "[\n    {\n        \"id\": 1,\n        \"title\": \"Безлимит\",\n        \"cost\": 1200,\n        \"price_per_month\": 0,\n        \"month\": 0,\n        \"unlimited\": true,\n        \"discount\": 0\n    },\n    {\n        \"id\": 2,\n        \"title\": \"1 месяц\",\n        \"cost\": 99,\n        \"price_per_month\": 99,\n        \"month\": 1,\n        \"unlimited\": false,\n        \"discount\": 0\n    },\n    {\n        \"id\": 3,\n        \"title\": \"6 месяцев\",\n        \"cost\": 499,\n        \"price_per_month\": 99,\n        \"month\": 6,\n        \"unlimited\": false,\n        \"discount\": 16\n    },\n    {\n        \"id\": 4,\n        \"title\": \"12 месяцев\",\n        \"cost\": 899,\n        \"price_per_month\": 99,\n        \"month\": 12,\n        \"unlimited\": false,\n        \"discount\": 25\n    }\n]",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>ID тарифа</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>Название тарифа</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "cost",
-            "description": "<p>Фактическая цена</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "price_per_month",
-            "description": "<p>Цена за месяц</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "month",
-            "description": "<p>Количество месяцев</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Boolean",
-            "optional": false,
-            "field": "unlimited",
-            "description": "<p>Безлимитный <code>True</code> - Да, <code>False</code> - Нет</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "discount",
-            "description": "<p>Процент скидки</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.0.0",
-    "name": "tariffs",
-    "group": "Основные",
-    "filename": "water/apps/core/rest/v1/api.py",
-    "groupTitle": "Основные"
-  },
-  {
     "type": "post",
     "url": "feedback/add_feedback/",
     "title": "Добавить отзыв",
@@ -3525,7 +3453,7 @@
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1647196945.0,\n        \"status\": true\n    },\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
+          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1651154743.120071,\n        \"status\": false,\n        \"method\": null\n    },\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": 500\n    }\n}",
           "type": "json"
         }
       ],
@@ -3551,6 +3479,13 @@
             "optional": false,
             "field": "subscription.status",
             "description": "<p>Есть подписка <code>True</code> - Да, <code>False</code> - Нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "subscription.method",
+            "description": "<p>Способ оплаты <code>null</code> - Пусто, <code>0</code> - Apple, <code>1</code> - Google, <code>2</code> - Robokassa</p>"
           },
           {
             "group": "Response",
