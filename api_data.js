@@ -2041,8 +2041,22 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
+            "field": "policy_ru",
+            "description": "<p>Политика конфиденциальности русский</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
             "field": "terms",
             "description": "<p>Условия использования</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "terms_ru",
+            "description": "<p>Условия использования русский</p>"
           }
         ]
       }
@@ -3486,6 +3500,13 @@ define({ "api": [
             "optional": false,
             "field": "subscription.method",
             "description": "<p>Способ оплаты <code>null</code> - Пусто, <code>0</code> - Apple, <code>1</code> - Google, <code>2</code> - Robokassa</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "subscription.type",
+            "description": "<p>Тип подписки <code>subscription.monthly, subscription.quarterly, subscription.semiannual, subscription.yearly</code></p>"
           },
           {
             "group": "Response",
