@@ -1039,7 +1039,14 @@ define({ "api": [
             "type": "Boolean",
             "optional": false,
             "field": "cups.cancel",
-            "description": "<p><code>True</code> - для отмены стакана с обязательным отрицательным значением milliliter</p>"
+            "description": "<p><code>True</code> - для отмены стакана с обязательным</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "cups.gfit",
+            "description": "<p>Google Fit отрицательным значением milliliter</p>"
           },
           {
             "group": "Parameter",
