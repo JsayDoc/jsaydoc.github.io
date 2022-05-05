@@ -3277,7 +3277,7 @@
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"daily_active\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-08\",\n        \"award\": {\n            \"title\": \"Вы пользуетесь приложением 1 дней\",\n            \"text\": \"Поздравляем и увидимся завтра!\",\n            \"photo_code\": \"da1\",\n            \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n            \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n        }\n    },\n    \"single_awards\": [\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 100,\n            \"created\": 1644515943,\n            \"award\": {\n                \"title\": \"Киберводяной\",\n                \"text\": \"Теперь точно всё готово: все дополнительные модули подключены!\",\n                \"photo_code\": \"s8\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы подключили все функции приложения!\",\n                \"condition\": \"Пользователь подключил все доп. модули в приложении (Watch, Health)\",\n                \"name\": \"Я подключил(а) все функции приложения!\",\n                \"repeat\": false,\n                \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n            }\n        },\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 30,\n            \"created\": 1644519478,\n            \"award\": {\n                \"title\": \"Слова — вода\",\n                \"text\": \"Первое сообщение написано! Здорово, что вы решили обратиться в чат приложения.\",\n                \"photo_code\": \"s5\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы написали в чате свое первое сообщение\",\n                \"condition\": \"Пользователь впервые написал в чат в приложении\",\n                \"name\": \"Я написал(а) в чате свое первое сообщение\",\n                \"repeat\": false,\n                \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n            }\n        }\n    ]\n}",
+          "content": "{\n    \"daily_norm\": {\n        \"notify\": true,\n        \"milliliter\": 500,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-06\"\n    },\n    \"daily_active\": {\n        \"notify\": true,\n        \"users_percent\": 100.0,\n        \"date\": \"2021-09-08\",\n        \"award\": {\n            \"title\": \"Вы пользуетесь приложением 1 дней\",\n            \"text\": \"Поздравляем и увидимся завтра!\",\n            \"photo_code\": \"da1\",\n            \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n            \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n        }\n    },\n    \"single_awards\": [\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 100,\n            \"created\": 1644515943,\n            \"award\": {\n                \"title\": \"Киберводяной\",\n                \"text\": \"Теперь точно всё готово: все дополнительные модули подключены!\",\n                \"photo_code\": \"s8\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы подключили все функции приложения!\",\n                \"condition\": \"Пользователь подключил все доп. модули в приложении (Watch, Health)\",\n                \"name\": \"Я подключил(а) все функции приложения!\",\n                \"repeat\": false,\n                \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n            }\n        },\n        {\n            \"date\": \"2022-02-10\",\n            \"users_percent\": 30,\n            \"created\": 1644519478,\n            \"award\": {\n                \"title\": \"Слова — вода\",\n                \"text\": \"Первое сообщение написано! Здорово, что вы решили обратиться в чат приложения.\",\n                \"photo_code\": \"s5\",\n                \"icon\": \"https://dev.api.water.jsay.ru/media/achievement/icons/icon.png\",\n                \"users_percent\": 100,\n                \"description\": \"Вы написали в чате свое первое сообщение\",\n                \"condition\": \"Пользователь впервые написал в чат в приложении\",\n                \"name\": \"Я написал(а) в чате свое первое сообщение\",\n                \"repeat\": false,\n                \"json\": \"https://dev.api.water.jsay.ru/media/achievement/json/data.json\"\n            }\n        }\n    ]\n}",
           "type": "json"
         },
         {
@@ -3288,6 +3288,41 @@
       ],
       "fields": {
         "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "daily_norm",
+            "description": "<p>Дневная цель</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "daily_norm.notify",
+            "description": "<p>Поздравить <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_norm.milliliter",
+            "description": "<p>Количество выпитой воды в миллилитрах</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "daily_norm.users_percent",
+            "description": "<p>Процент пользователей, которые достигли дневной цели</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "daily_norm.date",
+            "description": "<p>День выполнения</p>"
+          },
           {
             "group": "Response",
             "type": "Object",
