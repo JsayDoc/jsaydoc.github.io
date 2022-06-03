@@ -1,2 +1,2 @@
 # jsaydoc.github.io
-API документация проекта Jsay
+API документация проекта JSay Water 
