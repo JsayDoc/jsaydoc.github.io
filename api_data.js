@@ -2191,6 +2191,71 @@ define({ "api": [
     "groupTitle": "Отзывы"
   },
   {
+    "type": "post",
+    "url": "feedback/support/message/create/",
+    "title": "Создать сообщение поддержке",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сообщение создано\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "add_message",
+    "group": "Отзывы",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "2000",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Комментарий.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "allowedValues": [
+              "png",
+              "jpeg",
+              "jpg"
+            ],
+            "optional": false,
+            "field": "image",
+            "description": "<p>Картинка сообщения.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/feedback/rest/v1/api.py",
+    "groupTitle": "Отзывы"
+  },
+  {
     "type": "get",
     "url": "core/get_questions/",
     "title": "Варианты вопросов",
