@@ -2,7 +2,7 @@ define({
   "name": "Jsay",
   "version": "1.0.0",
   "description": "API документация",
-  "title": "Проект Jsay",
+  "title": "Проект Jsay Water",
   "url": "https://prod-api-water.jsay.ru/api/v1/",
   "sampleUrl": true,
   "defaultVersion": "0.0.0",
