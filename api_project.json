@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API документация",
   "title": "Проект Jsay Water",
-  "url": "https://prod-api-water.jsay.ru/api/v1/",
+  "url": "https://dev-api-water.jsay.ru/api/v1/",
   "sampleUrl": true,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
