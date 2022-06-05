@@ -3644,12 +3644,33 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1651154743.120071,\n        \"status\": false,\n        \"method\": null\n    },\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": [\n            {\n                \"cid\": \"1000\",\n                \"cdate\": \"1000\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 500\n            },\n            {\n                \"cid\": \"123\",\n                \"cdate\": \"123\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 100\n            }\n        ]\n    }\n}",
+          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1651154743.120071,\n        \"status\": false,\n        \"method\": null\n    },\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": [\n            {\n                \"cid\": \"1000\",\n                \"cdate\": \"1000\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 500\n            },\n            {\n                \"cid\": \"123\",\n                \"cdate\": \"123\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 100\n            }\n        ]\n    },\n    \"overrun\": {\n        \"notify\": false,\n        \"milliliter\": 0\n    }\n}",
           "type": "json"
         }
       ],
       "fields": {
         "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "overrun",
+            "description": "<p>Предложение изменить норму</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "overrun.notify",
+            "description": "<p>Уведомить о превышении, <code>True</code> - Да, <code>False</code> - Нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "overrun.milliliter",
+            "description": "<p>Среднее значение предложения изменить норму</p>"
+          },
           {
             "group": "Response",
             "type": "Object",
