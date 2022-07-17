@@ -2087,7 +2087,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"policy\": \"Политика конфиденциальности – по сути документ, при помощи которого вы объясняете вашим\n    пользователям то, как вы обрабатываете его данные. Часто встречается и другое (официальное) название\n    данного документа - Политика обработки персональных данных.\",\n    \"terms\": \"Условия использования, условия предоставления услуг (англ. Terms of service/use) — это правила,\n    с которыми нужно согласиться перед использованием какой-либо службы, чаще всего в интернете.\"\n}",
+          "content": "{\n    \"policy\": \"JSay IT built the JSay Water app and JSay Shower as a Freemium app.\n    This SERVICE is provided by JSay IT at no cost and is intended for use as is.\",\n    \"policy_ru\": \"Политика конфиденциальности – по сути документ, при помощи которого вы объясняете вашим\n    пользователям то, как вы обрабатываете его данные. Часто встречается и другое (официальное) название\n    данного документа - Политика обработки персональных данных.\",\n    \"terms\": \"By downloading or using the app, these terms will automatically apply to you –\n    you should make sure therefore that you read them carefully before using the app.\",\n    \"terms_ru\": \"Условия использования, условия предоставления услуг (англ. Terms of service/use) — это правила,\n    с которыми нужно согласиться перед использованием какой-либо службы, чаще всего в интернете.\"\n}",
           "type": "json"
         }
       ],
@@ -2429,6 +2429,13 @@
     "parameter": {
       "fields": {
         "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "project",
+            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
+          },
           {
             "group": "Parameter",
             "type": "Number",
