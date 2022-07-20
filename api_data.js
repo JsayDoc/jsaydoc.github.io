@@ -2457,123 +2457,6 @@ define({ "api": [
     "groupTitle": "Подписки"
   },
   {
-    "type": "post",
-    "url": "billing/get/subscription/",
-    "title": "Статус подписки",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    \"store\": \"0\"\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Response": [
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "store",
-            "description": "<p>Магазин подписки <code>0</code> - Apple, <code>1</code> - Google, <code>None</code> - Нет активной подписки</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": "{\n    \"error_code\": 21003,\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Error Code": [
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21002",
-            "description": "<p>Чек поврежден, не удалось его распарсить</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21003",
-            "description": "<p>Некорректный чек, покупка не подтверждена</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21004",
-            "description": "<p>Ваш Shared Secret некорректный или не соответствует чеку</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21005",
-            "description": "<p>Сервер эпла не смог обработать ваш запрос, стоит попробовать еще раз</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21006",
-            "description": "<p>Чек недействителен</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21007",
-            "description": "<p>Чек из SandBox (тестовой среды), но был отправлен в prod</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21008",
-            "description": "<p>Чек из прода, но был отправлен в тестовую среду</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21009",
-            "description": "<p>Сервер эпла не смог обработать ваш запрос, стоит попробовать еще раз</p>"
-          },
-          {
-            "group": "Error Code",
-            "optional": false,
-            "field": "21010",
-            "description": "<p>Аккаунт был удален</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.0.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "type": "String",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>User Bearer Token.</p>"
-          }
-        ]
-      }
-    },
-    "permission": [
-      {
-        "name": "User",
-        "title": "User access rights needed.",
-        "description": "<p>Permission is granted to modify user objects.</p>"
-      }
-    ],
-    "name": "get_subscription",
-    "group": "Подписки",
-    "filename": "water/apps/billing/rest/v1/api.py",
-    "groupTitle": "Подписки"
-  },
-  {
     "type": "get",
     "url": "accounts/account/",
     "title": "Просмотр данных",
@@ -2782,6 +2665,45 @@ define({ "api": [
         ]
       }
     },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
+  },
+  {
+    "type": "delete",
+    "url": "accounts/account/delete/remove/schedule/",
+    "title": "Отмена удаления пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Done\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "cancel_user_remove",
+    "group": "Пользователь",
     "filename": "water/apps/account/rest/v1/api.py",
     "groupTitle": "Пользователь"
   },
@@ -3049,7 +2971,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "health/list/",
+    "url": "accounts/health/list/",
     "title": "Просмотр часов и здоровья",
     "success": {
       "examples": [
@@ -3311,8 +3233,90 @@ define({ "api": [
     "groupTitle": "Пользователь"
   },
   {
+    "type": "post",
+    "url": "accounts/account/add/remove/schedule/",
+    "title": "Запрос на удаление пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"project\": \"1\",\n    \"store\": \"0\",\n    \"expires_date\": \"2022-07-21\",\n    \"remove_date\": \"2022-07-22\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "project",
+            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "store",
+            "description": "<p>Магазин, <code>0</code> - Apple, <code>1</code> - Google, <code>2</code> - Robokassa</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "expires_date",
+            "description": "<p>Дата завершения подписки</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "remove_date",
+            "description": "<p>Дата удаления пользователя</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n    \"project\": \"1\",\n    \"store\": \"0\",\n    \"expires_date\": \"2022-07-21\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "schedule_user_remove",
+    "group": "Пользователь",
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
+  },
+  {
     "type": "patch",
-    "url": "health/update/",
+    "url": "accounts/health/update/",
     "title": "Редактирование часов и здоровья",
     "success": {
       "examples": [
@@ -3824,6 +3828,13 @@ define({ "api": [
             "optional": false,
             "field": "billing",
             "description": "<p>Статус подписки <code>True</code> - Активна, <code>False</code> - Просроченна</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "remove_date",
+            "description": "<p>Дата удаления пользователя</p>"
           }
         ]
       }
