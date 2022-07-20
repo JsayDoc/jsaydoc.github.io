@@ -2457,6 +2457,58 @@ define({ "api": [
     "groupTitle": "Подписки"
   },
   {
+    "type": "post",
+    "url": "billing/cancel/robokassa/subscription/",
+    "title": "Отмена подписки на Robokassa",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Done\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "cancel_robokassa_subscription",
+    "group": "Подписки",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "project",
+            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/billing/rest/v1/api.py",
+    "groupTitle": "Подписки"
+  },
+  {
     "type": "get",
     "url": "accounts/account/",
     "title": "Просмотр данных",
@@ -3715,6 +3767,13 @@ define({ "api": [
             "optional": false,
             "field": "subscription.type",
             "description": "<p>Тип подписки <code>subscription.monthly, subscription.quarterly, subscription.semiannual, subscription.yearly</code></p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "subscription.renewal",
+            "description": "<p>Статус автопродления подписки (для Robokassa)</p>"
           },
           {
             "group": "Response",
