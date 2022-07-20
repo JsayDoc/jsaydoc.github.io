@@ -3259,18 +3259,16 @@ define({ "api": [
             "optional": false,
             "field": "store",
             "description": "<p>Магазин, <code>0</code> - Apple, <code>1</code> - Google, <code>2</code> - Robokassa</p>"
-          }
-        ],
-        "Response": [
+          },
           {
-            "group": "Response",
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "expires_date",
             "description": "<p>Дата завершения подписки</p>"
           },
           {
-            "group": "Response",
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "remove_date",
@@ -3283,7 +3281,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Error-Response:",
-          "content": "{\n    \"project\": \"1\",\n    \"store\": \"0\",\n    \"expires_date\": \"2022-07-21\",\n}",
+          "content": "{\n    \"project\": \"1\",\n    \"store\": \"0\",\n    \"expires_date\": \"2022-07-21\",\n    \"remove_date\": null\n}",
           "type": "json"
         }
       ]
@@ -3311,6 +3309,7 @@ define({ "api": [
     ],
     "name": "schedule_user_remove",
     "group": "Пользователь",
+    "description": "<p>Если у пользователя нет задачи на удаление и ответ сервера <code>400</code>, у пользователя есть активная подписка черезе Apple или Google</p>",
     "filename": "water/apps/account/rest/v1/api.py",
     "groupTitle": "Пользователь"
   },
