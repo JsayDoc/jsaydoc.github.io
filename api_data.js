@@ -1951,6 +1951,37 @@ define({ "api": [
     "groupTitle": "Напоминания"
   },
   {
+    "type": "post",
+    "url": "add/tap/{id}/",
+    "title": "Добавть тап из пуша",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Готово\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Операция прошла успешно</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "add_tap",
+    "group": "Основные",
+    "description": "<p><code>{id}</code> это значение полученное в payload пуша с ключом <code>mass_send_id</code></p>",
+    "filename": "water/apps/core/rest/v1/api.py",
+    "groupTitle": "Основные"
+  },
+  {
     "type": "get",
     "url": "core/advices/",
     "title": "Советы",
@@ -3844,7 +3875,7 @@ define({ "api": [
       "examples": [
         {
           "title": "1.Success-Response:",
-          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1651154743.120071,\n        \"status\": false,\n        \"method\": null\n    },\n    \"remove_date\": null,\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": [\n            {\n                \"cid\": \"1000\",\n                \"cdate\": \"1000\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 500\n            },\n            {\n                \"cid\": \"123\",\n                \"cdate\": \"123\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 100\n            }\n        ]\n    },\n    \"overrun\": {\n        \"notify\": false,\n        \"milliliter\": 0\n    },\n    \"rank\": false\n}",
+          "content": "{\n    \"billing\": true,\n    \"subscription\": {\n        \"expiry_date\": 1651154743.120071,\n        \"status\": false,\n        \"method\": null\n    },\n    \"remove_date\": null,\n    \"enable_push\": true,\n    \"check_email\": false,\n    \"check_full_info\": false,\n    \"maintenance\": true,\n    \"maintenance_title\": \"Заголовок технических работ\",\n    \"maintenance_text\": \"Текст технических работ\",\n    \"bottles\": [\n        100,\n        200,\n        300,\n        500\n    ],\n    \"daily_water\": {\n        \"water_norm\": 1500,\n        \"drunk\": 1500,\n        \"percent\": 100,\n        \"last_milli\": [\n            {\n                \"cid\": \"1000\",\n                \"cdate\": \"1000\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 500\n            },\n            {\n                \"cid\": \"123\",\n                \"cdate\": \"123\",\n                \"cancel\": false,\n                \"checked\": false,\n                \"milliliter\": 100\n            }\n        ]\n    },\n    \"overrun\": {\n        \"notify\": false,\n        \"milliliter\": 0\n    },\n    \"rank\": false,\n    \"reject_notify\": 1\n}",
           "type": "json"
         }
       ],
@@ -4038,6 +4069,13 @@ define({ "api": [
             "optional": false,
             "field": "rank",
             "description": "<p>Предложить оценить, <code>True</code> - Да, <code>False</code> - Нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "reject_notify",
+            "description": "<p>Сообщение неудачного списания (автопродление), <code>null</code> - попыток нет, <code>1</code> - попытка 1, <code>2</code> - попытка 2</p>"
           }
         ]
       }
