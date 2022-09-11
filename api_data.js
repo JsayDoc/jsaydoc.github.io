@@ -3966,7 +3966,7 @@ define({ "api": [
           },
           {
             "group": "Response",
-            "type": "List",
+            "type": "Object",
             "optional": false,
             "field": "promotions",
             "description": "<p>Промо акции пользователя</p>"
