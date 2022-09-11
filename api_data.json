@@ -3945,27 +3945,6 @@
         "Response": [
           {
             "group": "Response",
-            "type": "List",
-            "optional": false,
-            "field": "promotions",
-            "description": "<p>Промо акции пользователя</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Number",
-            "optional": false,
-            "field": "promotions.id",
-            "description": "<p>ID акции</p>"
-          },
-          {
-            "group": "Response",
-            "type": "String",
-            "optional": false,
-            "field": "promotions.type",
-            "description": "<p>Тип акции, <code>0</code> - +2 дня (Неактивные подписки)</p>"
-          },
-          {
-            "group": "Response",
             "type": "Object",
             "optional": false,
             "field": "overrun",
@@ -3984,6 +3963,27 @@
             "optional": false,
             "field": "overrun.milliliter",
             "description": "<p>Среднее значение предложения изменить норму</p>"
+          },
+          {
+            "group": "Response",
+            "type": "List",
+            "optional": false,
+            "field": "promotions",
+            "description": "<p>Промо акции пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "promotions.id",
+            "description": "<p>ID акции</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "promotions.type",
+            "description": "<p>Тип акции, <code>0</code> - +2 дня (Неактивные подписки)</p>"
           },
           {
             "group": "Response",
