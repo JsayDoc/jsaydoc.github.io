@@ -2462,13 +2462,6 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "project",
-            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "store",
@@ -2523,19 +2516,6 @@ define({ "api": [
     ],
     "name": "cancel_robokassa_subscription",
     "group": "Подписки",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "project",
-            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
-          }
-        ]
-      }
-    },
     "filename": "water/apps/billing/rest/v1/api.py",
     "groupTitle": "Подписки"
   },
@@ -2653,19 +2633,6 @@ define({ "api": [
     ],
     "name": "get_subscription",
     "group": "Подписки",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "project",
-            "description": "<p>Проект, <code>0</code> - Water, <code>1</code> - Shower</p>"
-          }
-        ]
-      }
-    },
     "filename": "water/apps/billing/rest/v1/api.py",
     "groupTitle": "Подписки"
   },
