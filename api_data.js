@@ -3624,6 +3624,358 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "accounts/account/lose/weight/",
+    "title": "Я худею",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сохранено\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Сохранено</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "lose_weight",
+    "group": "Режимы_воды",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "date",
+            "description": "<p>Текущая дата</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "state",
+            "description": "<p><code>True</code> - Включить режим, <code>False</code> - Отключить режим</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/hot/weather/",
+    "title": "Жаркая погода",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сохранено\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Сохранено</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "lose_weight",
+    "group": "Режимы_воды",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "date",
+            "description": "<p>Текущая дата</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "state",
+            "description": "<p><code>True</code> - Включить режим, <code>False</code> - Отключить режим</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/training/mode/",
+    "title": "Режим тренировок",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сохранено\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Сохранено</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "training_mode",
+    "group": "Режимы_воды",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "date",
+            "description": "<p>Текущая дата</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "mode",
+            "description": "<p>Режим тренировки, <code>0</code> - Я не занимаюсь спортом. <code>1</code> - Обычная тренировка. <code>2</code> - Тяжелая тренировка.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/get/water/modes/",
+    "title": "Режимы пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"lose_weight\": {\n        \"state\": false,\n        \"milliliter\": null\n    },\n    \"hot_weather\": {\n        \"state\": true,\n        \"milliliter\": 350\n    },\n    \"training_mode\": {\n        \"mode\": 0,\n        \"milliliter\": 0\n    }\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "lose_weight",
+            "description": "<p>Я худею</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "lose_weight.state",
+            "description": "<p>Состояние <code>True</code> - включен, <code>False</code> - Отключен</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "lose_weight.milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "hot_weather",
+            "description": "<p>Жаркая погода</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "hot_weather.state",
+            "description": "<p>Состояние <code>True</code> - включен, <code>False</code> - Отключен</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "hot_weather.milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "training_mode",
+            "description": "<p>Режим тренировок</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "training_mode.mode",
+            "description": "<p>Режим тренировки, <code>0</code> - Я не занимаюсь спортом. <code>1</code> - Обычная тренировка. <code>2</code> - Тяжелая тренировка.</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "training_mode.milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "user_modes",
+    "group": "Режимы_воды",
+    "description": "<p>Если значение milliliter <code>null</code>, значит данный режим не создавался</p>",
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
     "url": "accounts/awards_status/",
     "title": "Статус достижений Active и Single",
     "success": {
