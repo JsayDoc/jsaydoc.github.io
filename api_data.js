@@ -3624,6 +3624,147 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "promotion/create/answer/",
+    "title": "Создать ответ",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"id\": 7,\n    \"question\": 20,\n    \"answer\": \"Второй ответ )\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID ответа</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "question",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "answer",
+            "description": "<p>Ответ</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "create_answer",
+    "group": "Продвижение",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "question",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "answer",
+            "description": "<p>Ответ</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/promotion/rest/v1/api.py",
+    "groupTitle": "Продвижение"
+  },
+  {
+    "type": "post",
+    "url": "promotion/get/question/",
+    "title": "Промо вопрос",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"data\": {\n        \"id\": 19,\n        \"question\": \"TEST2\"\n    }\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Данные вопроса, если вопросов в БД нет, ответ будет <code>null</code></p>"
+          }
+        ],
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.id",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.question",
+            "description": "<p>Вопрос</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "promo_question",
+    "group": "Продвижение",
+    "filename": "water/apps/promotion/rest/v1/api.py",
+    "groupTitle": "Продвижение"
+  },
+  {
+    "type": "post",
+    "url": "promotion/update/answer/{id}/",
+    "title": "Обновить ответ",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Готово\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Операция прошла успешно</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "update_answer",
+    "group": "Продвижение",
+    "description": "<p><code>{id}</code> это значение полученное в методе создания ответа <code>id</code></p>",
+    "filename": "water/apps/promotion/rest/v1/api.py",
+    "groupTitle": "Продвижение"
+  },
+  {
+    "type": "post",
     "url": "accounts/account/hot/weather/",
     "title": "Жаркая погода",
     "success": {
