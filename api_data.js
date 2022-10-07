@@ -3687,7 +3687,7 @@ define({ "api": [
     "groupTitle": "Продвижение"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "promotion/get/question/",
     "title": "Промо вопрос",
     "success": {
