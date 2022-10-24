@@ -3585,6 +3585,26 @@ define({ "api": [
       }
     },
     "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
     "name": "accept_gift",
     "group": "Продвижение",
     "description": "<p><code>{id}</code> это значение полученное в методе статуса пользователя <code>promotions/id</code></p>",
@@ -3616,6 +3636,26 @@ define({ "api": [
       }
     },
     "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
     "name": "add_tap",
     "group": "Продвижение",
     "description": "<p><code>{id}</code> это значение полученное в payload пуша с ключом <code>promo_id</code></p>",
@@ -3675,7 +3715,7 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "answer",
             "description": "<p>Ответ</p>"
@@ -3757,6 +3797,26 @@ define({ "api": [
       }
     },
     "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
     "name": "update_answer",
     "group": "Продвижение",
     "description": "<p><code>{id}</code> это значение полученное в методе создания ответа <code>id</code></p>",
@@ -3830,6 +3890,69 @@ define({ "api": [
             "field": "state",
             "description": "<p><code>True</code> - Включить режим, <code>False</code> - Отключить режим</p>"
           },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "milliliter",
+            "description": "<p>Норма в миллилитрах</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/edit/hot/weather/",
+    "title": "Жаркая погода редактирование",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сохранено\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Сохранено</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "hot_weather_edit",
+    "group": "Режимы_воды",
+    "parameter": {
+      "fields": {
+        "Parameter": [
           {
             "group": "Parameter",
             "type": "Number",
@@ -4010,13 +4133,76 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "accounts/account/training/state/",
+    "title": "Режим тренировок ON/OFF",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Сохранено\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Сохранено</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "training_state",
+    "group": "Режимы_воды",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "state",
+            "description": "<p><code>True</code> - Включить режим, <code>False</code> - Отключить режим</p>"
+          }
+        ]
+      }
+    },
+    "filename": "water/apps/account/rest/v1/api.py",
+    "groupTitle": "Режимы_воды"
+  },
+  {
+    "type": "post",
     "url": "accounts/account/get/water/modes/",
     "title": "Режимы пользователя",
     "success": {
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"lose_weight\": {\n        \"state\": false,\n        \"milliliter\": null\n    },\n    \"hot_weather\": {\n        \"state\": true,\n        \"milliliter\": 350\n    },\n    \"training_mode\": {\n        \"mode\": 0,\n        \"milliliter\": 0\n    }\n}",
+          "content": "{\n    \"lose_weight\": {\n        \"state\": false,\n        \"milliliter\": null\n    },\n    \"hot_weather\": {\n        \"state\": true,\n        \"milliliter\": 350\n    },\n    \"training_mode\": {\n        \"mode\": 0,\n        \"milliliter\": 0,\n        \"state\": false\n    }\n}",
           "type": "json"
         }
       ],
@@ -4084,6 +4270,13 @@ define({ "api": [
             "optional": false,
             "field": "training_mode.milliliter",
             "description": "<p>Норма в миллилитрах</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "training_mode.state",
+            "description": "<p>Состояние <code>True</code> - включен, <code>False</code> - Отключен</p>"
           }
         ]
       }
