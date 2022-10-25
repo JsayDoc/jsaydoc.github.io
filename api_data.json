@@ -4195,7 +4195,7 @@
     "groupTitle": "Режимы_воды"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "accounts/account/get/water/modes/",
     "title": "Режимы пользователя",
     "success": {
