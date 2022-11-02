@@ -1952,7 +1952,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "add/tap/{id}/",
+    "url": "core/add/tap/{id}/",
     "title": "Добавить тап из пуша",
     "success": {
       "examples": [
