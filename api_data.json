@@ -381,7 +381,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"token\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6M\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNT\"\n    },\n    \"registeration\": false\n}",
+          "content": "{\n    \"token\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6M\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNT\"\n    },\n    \"is_new\": false\n}",
           "type": "json"
         }
       ],
@@ -412,7 +412,7 @@
             "group": "Response",
             "type": "Boolean",
             "optional": false,
-            "field": "registeration",
+            "field": "is_new",
             "description": "<p>Информация о регистрации пользователя</p>"
           }
         ]
